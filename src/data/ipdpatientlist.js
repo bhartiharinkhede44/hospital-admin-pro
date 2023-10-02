@@ -1,4 +1,4 @@
-[
+ export const ipdpatientlist = [
     {
         "srNo": 1,
         "id": 13,
@@ -10,7 +10,7 @@
     {
         "srNo": 2,
         "id": 14,
-        "patientName": "Sujata Jain",
+        "patientName": "Sujata Mali",
         "room": "AC",
         "city": "Rampur",
         "bedNo": 2

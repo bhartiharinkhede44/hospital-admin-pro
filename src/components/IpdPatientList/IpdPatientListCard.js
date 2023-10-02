@@ -9,19 +9,20 @@ const IpdPatientListCard = ({srNo, id, patientName, room, bedNo, removeTaskFromL
             <p>{patientName}</p>
             <p>{room}</p>
            <p>{bedNo}</p>
-            <span className="delete-task-icon"
+            <p className="delete-task-icon"
             onClick={() => {
                 removeTaskFromList(id);
             }}
-            >Remove Patient</span>
+            >
+                Remove</p>
 
-              <span className="edit-task-icon"
+              <p className="edit-task-icon"
             onClick={() => {
                 setTaskEditable(id);
             }}
             >Edit
-            </span>
+            </p>
         </div>
     )
 }
-export default Task
+export default IpdPatientListCard
