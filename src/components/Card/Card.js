@@ -4,7 +4,7 @@ import React from 'react'
 function Card({image,title,text}) {
   return (
     <div>
-      <div class="card mb-3" style={{maxWidth: "540px"}}>
+      <div class="card ms-5 mt-3" style={{maxWidth: "540px"}}>
   <div class="row g-0">
     <div class="col-md-4">
       <img src={image} class="img-fluid rounded-start" alt="..."/>

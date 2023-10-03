@@ -3,12 +3,16 @@
     padding: 0;
 }
 .doctor-image{
-    height: 400px;
-    margin-top: 0px;
+    height: 500px;
+    margin-left:50px; 
+    
 }
 .headline{
     color: blue;
     font-size: 50px;
+}
+.subhead{
+    font-size: 20px;
 }
 .featurehead{
     
