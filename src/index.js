@@ -7,7 +7,6 @@ import Ipd from "./views/Ipd/Ipd"
 
 
 
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <><Ipd /></>
