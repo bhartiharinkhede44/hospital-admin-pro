@@ -6,18 +6,18 @@ import "./Ipd.css"
 
 
 function Ipd() {
- const [contacts, setContacts] = useState(ipdpatientlist);
+ const [patients, setPatients] = useState(ipdpatientlist);
  const [searchTerm, setSearchTerm] = useState('')
 
  useEffect(() => {
-  const filteredContacts = ipdpatientlist.filter((contact) => {
-    const name = contact.patientName.toLocaleLowerCase();
-    const mobile = contact.id.toString();
+  const filteredPatients = ipdpatientlist.filter((patient) => {
+    const name = patient.patientName.toLocaleLowerCase();
+    const mobile = patient.id.toString();
     const query = searchTerm.toLowerCase();
     return (name.includes(query) || mobile.includes(query))
   })
 
-  setContacts(filteredContacts);
+  setPatients(filteredPatients);
  }, [searchTerm])
   return (
 <>
@@ -32,8 +32,8 @@ onChange={(e) => {setSearchTerm(e.target.value)}}
 
 <IpdHeader />
 <div>
-  {contacts.map((contact, index) => {
-const {srNo, id, patientName, room, bedNo} = contact;
+  {patients.map((patient, index) => {
+const {srNo, id, patientName, room, bedNo} = patient;
 
 return  <IpdPatientListCard
 key={index} 
@@ -46,7 +46,7 @@ bedNo={bedNo}
   })}
 </div>
 {
-  contacts.length === 0 ? <span className='pa-center'>Patient is not found!😔</span> : null
+  patients.length === 0 ? <span className='pa-center'>Patient is not found!😔</span> : null
 } 
 </>
 
