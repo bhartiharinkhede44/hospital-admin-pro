@@ -1,0 +1,18 @@
+.main-container{
+    margin: 0;
+    padding: 0;
+}
+.doctor-image{
+    height: 400px;
+    margin-top: 0px;
+}
+.headline{
+    color: blue;
+    font-size: 50px;
+}
+.featurehead{
+    
+    font-size: 40px;
+    font: bold;
+    text-align: center;
+}
