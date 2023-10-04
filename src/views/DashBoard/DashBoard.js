@@ -3,11 +3,18 @@ import React from 'react';
 import Config from './../../data/homeconfig.json';
 import homeimg from './hospital.png'
 import "./DashBoard.css"
+import Dashboard from '../../components/Sidebar/Sidebar';
+import Header from '../../components/Header/Header';
 
-function Home() {
+
+function DashBoard() {
     return (
         <>
-            <div className='top-header-on-dashboard' style={{ backgroundColor: Config.theme.accentColor }}>
+        <div className='d-flex'>
+            <div><Dashboard /></div>
+            <div> 
+                <Header />
+                 <div className='top-header-on-dashboard' style={{ backgroundColor: Config.theme.accentColor }}>
                 <div className='d-flex'><img src={homeimg} className='img-hospital' />
                     <div>
                         <h3 className='text-start' style={{ color: Config.theme.primaryColor }}>{Config.title}</h3>
@@ -16,7 +23,7 @@ function Home() {
                 </div>
 
             </div>
-
+<div className='dash-body'>
             <div className='dash-container'>
                 {
                     Config.services.map((serviceData, index) => {
@@ -34,8 +41,11 @@ function Home() {
                         )
                     })
                 }
-            </div>
+            </div></div>
+        </div>
+        
+        </div>
         </>
     )
 }
-export default Home;
+export default DashBoard;

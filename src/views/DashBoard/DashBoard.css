@@ -9,7 +9,7 @@
 .top-header-on-dashboard{
     background-color: white;
     padding: 15px;
-    height: 70px;
+    height: 90px;
 }
 .dash-container{
     background-color: #f1f3f6;
@@ -44,5 +44,9 @@
     position: absolute;
     top: 2px;
     right: 2px;
+
+}
+.dash-body{
+    background-color: #f1f3f6;
 
 }
