@@ -1,0 +1,39 @@
+{
+    "title":"Dashboard",
+    "text":"Dashboard Features",
+    "description": "This is homepage description",
+    "theme":{
+        "primaryColor":"#3333ff",
+        "secondaryColor":"#b35900",
+        "accentColor":"ccf5ff"
+    },
+    "services":[
+        {
+            "title":"Total Departments",
+            "img" : "https://img.icons8.com/?size=60&id=61555&format=png",
+            "value": "6"   
+        },
+        {
+            "title":"Total Doctors",
+            "img": "https://img.icons8.com/?size=160&id=Ks6arMSOe2n6&format=png",
+            "value": "12"  
+        },
+        {
+            "title":"Total Appoinments",
+            "img": "https://img.icons8.com/?size=160&id=AMUWk96X8gek&format=png",
+            "value": "80"  
+        },
+        {
+            "title":"Total IPD Patients",
+            "img": "https://img.icons8.com/?size=48&id=XBzpjUWophPZ&format=png",
+            "value": "17"  
+        },
+        {
+            "title":" Total OPD Patients",
+            "img": "https://img.icons8.com/?size=48&id=1xBcb3TiezZK&format=png",
+            "value": "22"  
+            
+        }
+                                       
+    ]
+}

@@ -1,0 +1,48 @@
+.img-hospital{
+    height: 70px;
+    margin-right: 10px;
+}
+.feture-text{
+    font-size: 15px;
+    margin-top: -5%;
+}
+.top-header-on-dashboard{
+    background-color: white;
+    padding: 15px;
+    height: 70px;
+}
+.dash-container{
+    background-color: #f1f3f6;
+    display: flex;
+    justify-content: space-evenly ;
+    flex-wrap: wrap;
+}
+
+.card-1 {
+    position: relative;
+}
+
+.card-title{
+    color: #3333ff;
+}
+
+.card-container{
+    height: 150px;
+    background-color: #c6c6fd;
+    width: 290px;
+    margin-top: 30px;
+    padding: 20px;
+    border: none;
+    border-radius: 20px;
+
+}
+.card-img {
+    height: 50px;
+    width: 50px;
+}
+.card-value {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+
+}
