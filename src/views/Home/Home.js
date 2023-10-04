@@ -17,11 +17,11 @@ import Footer from "../../components/Footer/Footer";
 
 
 
-
 function Home() {
     return (
         <div className="main-container ">
             <Navbar />
+
             <div class="row mt-5 ms-5">
                 <div class="col ms-5">
                     <h1 className="headline"> Hospital Management<br /> like Never Before.</h1>
@@ -73,7 +73,7 @@ function Home() {
             </div>
 
             <Footer/>
-
+        
         </div>
         
 
