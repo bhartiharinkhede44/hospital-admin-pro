@@ -12,6 +12,7 @@ import LabImage from "./Image/lab.png"
 import PharmacyImage from "./Image/pharmacy.png"
 import BillImage from "./Image/billing.png"
 import Footer from "../../components/Footer/Footer";
+import { createBrowserRouter,RouterProvider } from "react-router-dom";
 
 
 
