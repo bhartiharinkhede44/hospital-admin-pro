@@ -1,0 +1,89 @@
+[
+    {
+        "id":"1",
+        "name":"Acetaminophen (Tylenol)"
+    },
+    {
+        "id":"2",
+        "name":"Ibuprofen (Advil, Motrin)"
+    },
+    {
+        "id": "3",
+        "name": "Lisinopril (Prinivil, Zestril)"
+    
+    },
+    {
+        "id": "4",
+        "name": "Metformin"
+        
+    },
+    {
+        "id":"5",
+        "name":"Atorvastatin (Lipitor)"
+
+    },
+    {
+        "id":"6",
+        "name":"Ciprofloxacin (Cipro)" 
+    },
+
+    {
+        "id":"7",
+        "name":"Sertraline (Zoloft)" 
+    },
+    {
+        "id":"8",
+        "name":"Levothyroxine (Synthroid)" 
+    },
+    {
+        "id":"9",
+        "name":"Omeprazole (Prilosec)"
+    },
+    {
+        "id":"10",
+        "name":"Aspirin"
+    },
+    {
+        "id":"11",
+        "name":"Amoxicillin"
+    },
+    {
+        "id":"12",
+        "name":"Metoprolol (Lopressor)"
+    },
+    {
+        "id":"13",
+        "name":"Losartan (Cozaar)"
+
+    },
+    {
+        "id":"14",
+        "name":"Alprazolam (Xanax)"
+    },
+    {
+        "id":"15",
+        "name":"Hydrochlorothiazide (HCTZ)"
+    },
+    {
+        "id":"16",
+        "name":"Cetirizine (Zyrtec)"
+    },
+    {
+        "id":"17",
+        "name":"Warfarin (Coumadin)"
+    },
+    {
+        "id":"18",
+        "name":"Diazepam (Valium)"
+    },
+    {
+        "id":"19",
+        "name":"Metronidazole (Flagyl)"
+    },
+    {
+        "id":"20",
+        "name":"Naproxen (Aleve)"
+    }
+
+
+]
