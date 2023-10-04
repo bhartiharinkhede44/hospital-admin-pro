@@ -8,3 +8,6 @@
     display: flex;
     justify-content: space-evenly;
 }
+.div-in{
+    cursor: pointer;
+}

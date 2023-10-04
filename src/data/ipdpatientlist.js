@@ -18,9 +18,10 @@
     {
         "srNo": 3,
         "id": 15,
-        "patientName": "Rghav jha",
+        "patientName": "Raghav jha",
         "room": "Non-AC",
         "city": "pune",
         "bedNo": 1
     }
+    
 ]

@@ -4,6 +4,8 @@
 display: flex;
 margin: 0px;
 padding: 0;
+position: sticky;
+top: 0;
 
 }
 .sidebar-open{
