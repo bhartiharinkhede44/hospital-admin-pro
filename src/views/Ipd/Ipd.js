@@ -20,7 +20,7 @@ function Ipd() {
   const [patientName, setPatientName] = useState('');
   const [room, setRoom] = useState('');
   const [bedNo, setBedNo] = useState('');
-  const [isEdit, setIsEdit] = useState(false);
+  const [isEdit, setIsEdit] = useState('');
 
 
   useEffect(() => {
@@ -87,7 +87,7 @@ function Ipd() {
     saveListToLocalStorage(tempArray)
     showToast('Task remove from list succesfully', 'success', 3000);
   }
-  const setTaskEditable = (id) => {
+  const setListEditable = (id) => {
     setIsEdit(true);
     setId(id);
 
@@ -100,7 +100,7 @@ function Ipd() {
     console.log(currentEditlist)
   }
 
-  const Update = () => {
+  const UpdateList = () => {
 
     const indexToUpdate = findIndexByTaskId(id);
 
@@ -157,7 +157,7 @@ function Ipd() {
                   room={room}
                   bedNo={bedNo}
                   removePatientFromList={removePatientFromList}
-                  setTaskEditable={setTaskEditable}
+                  setListEditable ={setListEditable}
 
                 />
               })}
@@ -217,7 +217,7 @@ function Ipd() {
                      {
                         isEdit ?
 
-                          <button className="btn-add-task" type="button" onClick={Update}>Update </button>
+                          <button className="btn-add-task" type="button" onClick={UpdateList}>Update </button>
                           :
                           <button className="btn-add-task" type="button" onClick={addPatientToList}>Add Patient</button>
 

@@ -1,7 +1,7 @@
 import "./IpdPatientListCard.css"
 import React from "react"
 
-const IpdPatientListCard = ({srNo, id, patientName, room, bedNo, removePatientFromList, setTaskEditable}) => {
+const IpdPatientListCard = ({srNo, id, patientName, room, bedNo, removePatientFromList, setListEditable}) => {
     return(
         <div className="task-container">
            <p className="div-in"> {srNo}</p>
@@ -18,7 +18,7 @@ const IpdPatientListCard = ({srNo, id, patientName, room, bedNo, removePatientFr
 
               <p className="edit-task-icon div-in"
             onClick={() => {
-                setTaskEditable(id);
+                setListEditable(id);
             }}
             >Edit
             </p>
