@@ -1,0 +1,27 @@
+.task-container {
+    width: 100%;
+    height: 80px;
+    border: none;
+    font-size: 18px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    box-shadow: 0 1px 1px 1px grey;
+}
+.div-in{
+    cursor: pointer;
+
+}
+.div-edit{
+  
+    color: #fff;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+.activity-div{
+   display: flex;
+   justify-content: center;
+  margin-right: 10px;
+  margin-left: 20px;
+}

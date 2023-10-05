@@ -1,6 +1,63 @@
-import React from "react";
+import React, { useState } from "react";
+import RegPatient from "../../components/RegPatient/RegPatient";
 
 function Registration() {
+  const [registerPatient, setRegisterPatient] = useState([
+    {
+      patientname: "Sakshi Mane",
+      gender: "Female",
+      age: 20,
+      bloodgroup: "b+",
+      contactnumber: "123",
+      city: "Rahuri",
+      date: "2015-1-dec",
+    },
+    {
+      patientname: "Sakshi Mane",
+      gender: "Female",
+      age: 20,
+      bloodgroup: "b+",
+      contactnumber: "123",
+      city: "Rahuri",
+      date: "2015-1-dec",
+    },
+    {
+      patientname: "Sakshi Mane",
+      gender: "Female",
+      age: 20,
+      bloodgroup: "b+",
+      contactnumber: "123",
+      city: "Rahuri",
+      date: "2015-1-dec",
+    },
+    {
+      patientname: "Sakshi Mane",
+      gender: "Female",
+      age: 20,
+      bloodgroup: "b+",
+      contactnumber: "123",
+      city: "Rahuri",
+      date: "2015-1-dec",
+    },
+    {
+      patientname: "Sakshi Mane",
+      gender: "Female",
+      age: 20,
+      bloodgroup: "b+",
+      contactnumber: "123",
+      city: "Rahuri",
+      date: "2015-1-dec",
+    },
+    {
+      patientname: "Sakshi Mane",
+      gender: "Female",
+      age: 20,
+      bloodgroup: "b+",
+      contactnumber: "123",
+      city: "Rahuri",
+      date: "2015-1-dec",
+    },
+  ]);
   return (
     <>
       <div className="container p-5 mt-5 shadow border-black ">
@@ -85,6 +142,36 @@ function Registration() {
             </div>
           </div>
         </form>
+        <hr className="hr mt-4" />
+        <div className="container mt-4">
+          <h1>REGISTRATION PATIENT</h1>
+
+          {registerPatient.map((patient, i) => {
+            const {
+              patientname,
+              gender,
+              age,
+              bloodgroup,
+              contactnumber,
+              city,
+              date,
+            } = patient;
+            return (
+              <div>
+                <RegPatient
+                  key={i}
+                  patientname={patientname}
+                  gender={gender}
+                  age={age}
+                  bloodgroup={bloodgroup}
+                  contactnumber={contactnumber}
+                  city={city}
+                  date={date}
+                />
+              </div>
+            );
+          })}
+        </div>
       </div>
     </>
   );
