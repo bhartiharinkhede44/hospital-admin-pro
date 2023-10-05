@@ -4,6 +4,8 @@
 display: flex;
 margin: 0px;
 padding: 0;
+position: sticky;
+top: 0;
 
 }
 .sidebar-open{
@@ -21,9 +23,9 @@ padding: 0;
    padding-left: 20px;
 }
 .main{
-   
-    flex-grow: 1;
-    background-color:#f1f3f6;
+   height: 70px;
+    /* flex-grow: 1; */
+    background-color:#3333ff;
 
 }
 .bi-list{

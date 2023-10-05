@@ -1,13 +1,12 @@
 {
     "title":"Dashboard",
     "text":"Dashboard Features",
-    "description": "This is homepage description",
     "theme":{
         "primaryColor":"#3333ff",
         "secondaryColor":"#b35900",
         "accentColor":"ccf5ff"
     },
-    "services":[
+    "management":[
         {
             "title":"Total Departments",
             "img" : "https://img.icons8.com/?size=60&id=61555&format=png",
@@ -33,6 +32,11 @@
             "img": "https://img.icons8.com/?size=48&id=1xBcb3TiezZK&format=png",
             "value": "22"  
             
+        },
+        {
+            "title":"Total Available Beds",
+            "img": "https://img.icons8.com/?size=100&id=108571&format=png",
+            "value": "17"  
         }
                                        
     ]

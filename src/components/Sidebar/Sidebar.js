@@ -50,13 +50,7 @@ export default function Dashboard(){
         </div>
       
         </div>
-       <div className="main"> 
-       <div className="main-navbar">    <i class="bi bi-list" onClick={toggleMenu} ></i> 
-       
-       </div>
-       <div className="main-navbar2">     </div>
-   
-       </div>
+      
        
        </div>
         </>
