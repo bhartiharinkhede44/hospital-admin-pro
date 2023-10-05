@@ -116,13 +116,12 @@ function Ipd() {
     setIsEdit(true);
     setId(id);
 
-    const currentEditlist = findIndexByListId(id);
-    // setSrNo(currentEditlist.srNo);
-    setPatientName(currentEditlist.patientName);
-    setRoom(currentEditlist.room);
-    setBedNo(currentEditlist.bedNo);
+    const currentIndex = findIndexByListId(id);
+    const patient = patients[currentIndex]
 
-    console.log(currentEditlist);
+    setPatientName(patient.patientName);
+    setRoom(patient.room);
+    setBedNo(patient.bedNo);
   };
 
   const UpdateList = () => {
@@ -208,6 +207,7 @@ function Ipd() {
                       placeholder="Enter Patient Name"
                       className="task-input"
                     />
+
                     <input
                       type="text"
                       value={room}
