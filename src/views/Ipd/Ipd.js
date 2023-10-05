@@ -33,7 +33,7 @@ function Ipd() {
   }, [searchTerm]);
 
   useEffect(() => {
-    const list = JSON.parse(localStorage.getItem('taskminder'));
+    const list = JSON.parse(localStorage.getItem('ipdlistpatient'));
     if (list && list.length >= 0) {
       setPatients(list);
     }
@@ -229,9 +229,9 @@ function Ipd() {
                     />
                     {
                       isEdit ?
-                        <button className="btn-add-task" type="button" onClick={UpdateList}>Update </button>
+                        <button className="btn-add-task buttons" type="button" onClick={UpdateList}>Update </button>
                         :
-                        <button className="btn-add-task" type="button" onClick={addPatientToList}>Add Patient</button>
+                        <button className="btn-add-task buttons" type="button" onClick={addPatientToList}>Add Patient</button>
                     }
                   </form>
                 </div>

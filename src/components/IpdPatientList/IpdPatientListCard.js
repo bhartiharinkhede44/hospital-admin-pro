@@ -14,13 +14,13 @@ const IpdPatientListCard = ({ id, patientName, room, bedNo, removePatientFromLis
                 removePatientFromList(id);
             }}
             >
-                Remove</p>
+                🗑️</p>
 
               <p className="edit-task-icon div-in"
             onClick={() => {
                 setListEditable(id);
             }}
-            >Edit
+            >🖊️
             </p>
         </div>
     

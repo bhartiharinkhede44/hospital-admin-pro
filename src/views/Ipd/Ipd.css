@@ -68,7 +68,7 @@ padding-left: 10px;
     flex-wrap: wrap;
     height: 200px;
 }
-button{
+.buttons{
     background-color: #3333ff;
     color: white;
     padding: 10px 20px;

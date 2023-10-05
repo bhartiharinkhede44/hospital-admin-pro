@@ -8,6 +8,7 @@ import DashBoard from './views/DashBoard/DashBoard'
 import Ipd from './views/Ipd/Ipd'
 import Department from './views/Department/Department';
 import { createBrowserRouter,RouterProvider} from 'react-router-dom';
+import OpdPatients from './views/Opd/Opd';
 
 const router =createBrowserRouter([
     {
@@ -25,6 +26,9 @@ const router =createBrowserRouter([
     {
         path:"/deparment",
         element:<Department/>
+    }, {
+        path:"/opd",
+        element:<OpdPatients/>
     }
 
 ])
