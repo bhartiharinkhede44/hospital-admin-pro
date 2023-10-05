@@ -4,11 +4,11 @@ import IpdPatientListCard from './../../components/IpdPatientList/IpdPatientList
 import IpdHeader from './../../components/IpdHeader/IpdHeader';
 import "./Ipd.css";
 import Header from '../../components/Header/Header';
-import Dashboard from '../../components/Sidebar/Sidebar';
 import bed from './bed.png';
 import add from './add.png';
 import showToast from 'crunchy-toast';
 import { saveListToLocalStorage } from './../../data/localstorage';
+import Sidebar from '../../components/Sidebar/Sidebar';
 
 function Ipd() {
   const [patients, setPatients] = useState([]);
@@ -148,7 +148,7 @@ function Ipd() {
   return (
     <>
       <div className='d-flex'>
-        <div><Dashboard /></div>
+        <div><Sidebar /></div>
         <div className='ipd-list-div'>
           <Header />
           <div className='ipd-top-header d-flex'><img src={bed} /><h1 className='heading'>IPD Patient</h1></div>
@@ -165,7 +165,7 @@ function Ipd() {
             </div>
           </div>
 
-          <div className='container-patient'>
+          <div className='container-patient div-patient-list'>
             <div>
               <IpdHeader />
             </div>
@@ -192,12 +192,10 @@ function Ipd() {
           </div>
           <hr />
           <div>
-            <h1 className='add-btn'><img src={add} />&nbsp; ADD PATIENT</h1>
+            <h1 className='add-btn'><img src={add} />{isEdit ? `UPDATE ${id}` : 'ADD PATIENT'}</h1>
             <div>
               <div>
-                <h2 className="text-center">
-                  {isEdit ? `Update ${id}` : 'Add Patient'}
-                </h2>
+            
                 <div className="add-patient-to-list-container">
                   <form>
                    
