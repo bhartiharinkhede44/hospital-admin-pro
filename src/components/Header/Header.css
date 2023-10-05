@@ -1,0 +1,27 @@
+.header{
+    background-color: rgb(9, 90, 252);
+    height: 80px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    padding-top: 10px;
+    z-index: 1;
+    display: flex;
+    justify-content: end;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.btn-log-out{
+    color: #fff;
+padding-top: 17px;
+ margin-right: 25px;
+    position: static;
+
+}
+.png-log-out{
+    height: 30px;
+    
+}
+img{
+    margin-right: 20px;
+}

@@ -4,13 +4,13 @@ function IpdHeader(){
     return(
         <>
         <div className="task-container-1">
-        <h4>Sr.No</h4>
-        <h4>Patient <br />ID</h4> 
-        <h4>Patient <br />Name</h4> 
-        <h4>Room</h4>
-        <h4>Bed <br />No</h4>
-        <h4>Remove <br />Patient</h4>
-        <h4>Edit</h4>
+        <h5 className="sr-no div-in">Sr.No</h5>
+        <h5 className="div-in">Patient <br />ID</h5> 
+        <h5 className="div-in">Patient <br />Name</h5> 
+        <h5 className="div-in">Room</h5>
+        <h5 className="div-in">Bed <br />No</h5>
+        <h5 className="div-in">Remove <br />Patient</h5>
+        <h5 className="div-in">Edit</h5>
         </div>
         </>
     )

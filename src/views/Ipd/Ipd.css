@@ -1,3 +1,91 @@
-.search-bar{
-    font-size: 20px;
- }
+.search-bar {
+    font-size: 23px;
+    display: flex;
+    justify-content: end;
+}
+
+.ipd-list-div {
+    flex-grow: 1;
+}
+
+.ipd-top-header {
+    background-color: white;
+    padding: 15px;
+    height: 90px;
+    box-shadow: 0 4px 2px 0.5px gray;
+    padding-left: 27px;
+
+}
+
+.heading {
+    margin-left: 20px;
+    color: #3333ff;
+
+}
+
+.search {
+    height: 40px;
+    font-size: 15px;
+}
+
+.search-div {
+    margin-top: 30px;
+    display: flex;
+    height: 50px;
+    justify-content: end;
+    position: sticky;
+    top: 80px;
+    z-index: 1;
+    background-color: white;
+}
+
+.add-btn {
+    height: 40px;
+    color: #3333ff;
+    font-size: 40px;
+    font-weight: bold;
+    margin-left: 25px;
+}
+
+.container-patien {
+    box-shadow: 1px 0 2px 0.5px grey;
+    margin: 20px;
+    overflow: scroll;
+
+}
+.task-input{
+height: 40px;
+margin-top: 20px;
+margin: 30px;
+padding-left: 10px;
+}
+.add-patient-to-list-container{
+   border: 1px solid grey;
+    margin: 20px;
+    box-shadow: 1px 2px 2px 1px gray;
+    padding-left: 27px;
+    display: flex;
+    flex-wrap: wrap;
+    height: 200px;
+}
+.buttons{
+    background-color: #3333ff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    display: block;
+    margin-right: auto;
+  margin-top: 20px;
+    margin-left: auto;
+
+}
+.div-patient-list{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
+@media (max-width: 768px) {
+    
+  }

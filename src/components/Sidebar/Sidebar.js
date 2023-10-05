@@ -31,32 +31,25 @@ export default function Dashboard(){
        <div className="wrap"> 
        <div className= " sidebar sidebar-open" id="menu">
 
-        <div className="names"> <span className="nametext1"> Super Admin </span></div> 
+ <div className="logo"><span className="nametext1">HospitalAdminPro</span></div>
         <div className="sidebar-navlinks">
             <ul>
-                <li>
-                <i class="bi bi-house-fill">  Dashboard</i> </li>
+                <li> <i class="bi bi-person-circle"></i> Dashboard </li>
                 <li> <i class="bi bi-person-circle"></i> Department Module </li>
-                <li> <i class="bi bi-person-circle"></i> user Module </li>
-                <li>  <i class="bi bi-person-circle"></i> Doctor Module </li>
-                <li> <i class="bi bi-person-circle"></i> Patient Module </li>
-                <li> <i class="bi bi-clipboard2-check"></i> Appoinment Module </li>
-                <li> <i class="bi bi-clipboard2-check"></i> Treatment Module </li>
-                <li> <i class="bi bi-clipboard2-check"></i> Diagnosis Module </li>
-                <li> <i class="bi bi-clipboard2-check"></i> Medicine Module </li>
+                <li> <i class="bi bi-person-circle"></i> Doctor Module </li>
+                <li>  <i class="bi bi-person-circle"></i> Appoinment </li>
+                <li> <i class="bi bi-clipboard2-check"></i> Registration </li>
+                <li> <i class="bi bi-clipboard2-check"></i> IPD Patients </li>
+                <li> <i class="bi bi-clipboard2-check"></i> OPD Painents </li>
+                <li> <i class="bi bi-clipboard2-check"></i> Prescription</li>
+                <li> <i class="bi bi-clipboard2-check"></i> Services</li>
 
             </ul>
 
         </div>
       
         </div>
-       <div className="main"> 
-       <div className="main-navbar">    <i class="bi bi-list" onClick={toggleMenu} ></i> 
-       
-       </div>
-       <div className="main-navbar2">     </div>
-   
-       </div>
+      
        
        </div>
         </>
