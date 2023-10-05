@@ -1,3 +1,6 @@
 export const saveListToLocalStorage = (tasks) => {
-    localStorage.setItem('taskminder', JSON.stringify(tasks))
+    localStorage.setItem('ipdlistpatient', JSON.stringify(tasks))
+}
+export const saveListToLocalStorageOpdPatients = (tasks) => {
+    localStorage.setItem('opdlistpatient', JSON.stringify(tasks))
 }
