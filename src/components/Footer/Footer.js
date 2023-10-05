@@ -3,7 +3,7 @@ import React from 'react'
 
 function Footer() {
   return (
-    <div class="container text-center bg-primary text-light mt-5 p-5">
+    <div class="container text-center bg-primary text-light mt-5  p-5">
   <div class="row">
     <div class="col">
     <h4 className="">Hospital Management<br /> like Never Before.</h4>

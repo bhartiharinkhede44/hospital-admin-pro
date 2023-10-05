@@ -12,10 +12,6 @@ import LabImage from "./Image/lab.png"
 import PharmacyImage from "./Image/pharmacy.png"
 import BillImage from "./Image/billing.png"
 import Footer from "../../components/Footer/Footer";
-import { createBrowserRouter,RouterProvider } from "react-router-dom";
-
-
-
 
 
 function Home() {
@@ -25,8 +21,8 @@ function Home() {
 
             <div class="row mt-5 ms-5">
                 <div class="col ms-5">
-                    <h1 className="headline"> Hospital Management<br /> like Never Before.</h1>
-                    <p className="subhead">Introducing our groundbreaking healthcare IT solution, a Web-Based Hospital Management System. This innovative platform streamlines operations, elevates patient care, and enhances overall efficiency for healthcare facilities. Experience the future of healthcare management with us.</p>
+                    <h1 className="headline mt-5"> Hospital Management<br /> like Never Before.</h1>
+                    <p className="subhead mt-5">Introducing our groundbreaking healthcare IT solution, a Web-Based Hospital Management System. This innovative platform streamlines operations, elevates patient care, and enhances overall efficiency for healthcare facilities. Experience the future of healthcare management with us.</p>
                 </div>
                 <div class="col mt-1">
                     <img src={DoctorImg} className="doctor-image" /> 
@@ -74,6 +70,7 @@ function Home() {
             </div>
 
             <Footer/>
+           
         
         </div>
         
