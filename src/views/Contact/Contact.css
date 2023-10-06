@@ -1,0 +1,229 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+.navbar-conatact{
+    height: 120px;
+    background-color: cornflowerblue;
+    font-size: 30px;
+    
+}
+.navbar-conatact ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+}
+.navbar-conatact ul li{
+   padding-top: 35px;
+    color: aliceblue;
+    cursor: pointer;
+}
+.navbar-conatact ul li:hover{
+    color: gold;
+    border-bottom-style: solid;
+
+}
+.nav-head-contact{
+    height: 170px;
+    
+    background-color:white;
+    display: flex;
+    justify-content: space-around;
+}
+.nametext{
+    font-size: 55px;
+    display: block;
+    color: cornflowerblue;
+    align-items: center;
+    padding-top: 40px;
+    
+}
+.con-logo{
+    padding-top: 20px;
+    display: block;
+}
+.third-img{
+    width: 100%;
+    height: 570px;
+}
+.con-numbers{
+    height: 200px;
+    background-color: #42a7f5;
+    display: flex;
+    justify-content: space-around;
+}
+.con-text2{
+    font-size: 55px;
+    color: aliceblue;
+    cursor: pointer;
+    padding-top: 40px ;
+}
+.cell{
+    border-radius: 50%;
+}
+.fourth-cont{
+    height: 190px;
+    background-color: #303f9f;
+    display: flex;
+    justify-content: space-around;
+}
+.con-text3{
+    font-size: 35px;
+    color: aliceblue;
+    cursor: pointer;
+    padding-top: 40px ;
+}
+.third-logo{
+    border-radius: 50%;
+}
+.loca-embede{
+    display: flex;
+    flex-direction: row;
+    height: 650px;
+   
+}
+.form{
+   padding: 65px;
+  font-size: 30px;
+  height: 400px;
+  width: 50%;
+  margin: 15px;
+  
+}
+.form2{
+    
+    height: 400px;
+    width: 50%;
+}
+.form-label{
+    width: 350px;
+}
+.img-form{
+width: 600px;
+}
+.form-control{
+    padding: 5px;
+    font-size: 25px;
+    background-color: rgb(239, 236, 236);
+    color: black;
+}
+.cn-text1{
+    color: black;
+    font-size: 50px;
+    
+}
+.btn{
+    padding: 5px;
+    width: 150px;
+    font-size: 30px;
+}
+
+
+
+@media screen  and (max-width:700px){
+    .navbar-conatact{
+        font-size: 20px;
+        height: 70px;
+    }  
+    .navbar-conatact ul li{
+        padding-top: 15px;
+    }
+    .nametext{
+        font-size: 30px;
+        padding-top: 16px;
+    }
+   .nav-head-contact{
+    height: 90px;
+   }
+   .con-logo{
+    height: 80px;
+   }
+   .third-img{
+    height: 350px;
+   }
+   .con-numbers{
+    height: 150px;
+   }
+   .con-text2 h1 {
+    font-size: 20px;
+    padding-top: 10px;
+   }
+   .con-text2 h2{
+        font-size: 17px;
+   }
+   .cell{
+    height: 50px;
+   }
+   .fourth-cont{
+    height: 170px;
+    padding-top: 0px;
+  
+   }
+   .con-text3 p{
+        font-size: 20px;
+        padding: 10px;
+        position: relative;
+        bottom: 10px;
+   }
+   .third-logo{
+    height: 50px;
+   position: relative;
+   bottom: 30px;
+   
+   }
+   .text7{
+    font-size: 20px;
+    position: relative;
+    bottom: 28px;
+ 
+    
+   }
+   .loca-embede{
+    display: flex;
+    flex-direction: column;
+    
+   }
+   .form{
+    width: 100%;
+    padding: 37px;
+   height: auto;
+    
+   }
+   .cn-text1{
+    font-size: 35px;
+    padding-top: 10px;
+   }
+   .form-label{
+    font-size: 25px;
+   }
+   .form-control{
+    padding: 5px;
+   }
+   .btn{
+    padding: 5px;
+    width: 130px;
+   }
+   .img-form{
+    display: none;
+    visibility: hidden;
+   }
+   .cont-footer{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+   }
+   .con-text4{
+    font-size: 20px;
+    cursor: pointer;
+   }
+   .con-text6{
+    font-size: 20px;
+    cursor: pointer;
+   }
+   .bi{
+    font-size: 20px;
+   }
+}
