@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import RegPatient from "../../components/RegPatient/RegPatient";
+import Button from "./../../components/Button/Button";
 
 function Registration() {
   const [registerPatient, setRegisterPatient] = useState([
@@ -137,7 +138,10 @@ function Registration() {
                 />
               </div>
               <div className="col-md-4">
-                <button className="btn btn-primary px-5 ">Add Patient</button>
+                <Button
+                  btnName={"Add Patient"}
+                  CustomBtn={"btn btn-primary px-5 mt-1"}
+                />
               </div>
             </div>
           </div>
