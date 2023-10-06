@@ -16,7 +16,7 @@ export const opdpatientlist = [
         "bloodGroup": "B+",
         "city": "Nagpur",
         "contactNo":1234599990
-    }
+    },
 
     {
         "srNo": 3,
