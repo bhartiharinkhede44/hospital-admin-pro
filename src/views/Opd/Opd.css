@@ -86,3 +86,6 @@ button{
 @media (max-width: 768px) {
     
   }
+  .png-bed{
+    height: 50px;
+  }
