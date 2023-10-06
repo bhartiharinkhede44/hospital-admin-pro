@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { opdpatientlist } from '../../data/opdpatientlist'; 
+import { opdpatientlist } from '../../data/opdpatientlist';
 import OpdPatientListCard from './../../components/OpdPatientListCard/OpdPatientListCard';
 import OpdHeader from './../../components/OpdHeader/OpdHeader';
 import "./Opd.css";
@@ -17,10 +17,10 @@ function OpdPatients() {
   // const [srNo, setSrNo] = useState(1);
   const [id, setId] = useState(1);
   const [patientName, setPatientName] = useState('');
-const [age, setAge] = useState('');
-const [bloodGroup, setBloodGroup] = useState('');
-const [city, setCity] = useState('');
-const [contactNo, setContactNo] =useState('');
+  const [age, setAge] = useState('');
+  const [bloodGroup, setBloodGroup] = useState('');
+  const [city, setCity] = useState('');
+  const [contactNo, setContactNo] = useState('');
   const [isEdit, setIsEdit] = useState('');
 
   useEffect(() => {
@@ -67,32 +67,28 @@ const [contactNo, setContactNo] =useState('');
     //   showToast("Sr Number is Required.",'alert', 3000);
     //   return;
     // }
-    if(!patientName)
-    {
-      showToast("patient name is Required.",'alert', 3000);
+    if (!patientName) {
+      showToast("patient name is Required.", 'alert', 3000);
       return;
     }
-    if(!age)
-    {
-      showToast("Patient age is Required.",'alert', 3000);
+    if (!age) {
+      showToast("Patient age is Required.", 'alert', 3000);
       return;
     }
-    if(!city)
-    {
-      showToast("Patient City is Required.",'alert', 3000);
+    if (!city) {
+      showToast("Patient City is Required.", 'alert', 3000);
       return;
     }
-    if(!contactNo)
-    {
-      showToast("Patient Contact Number is Required.",'alert', 3000);
+    if (!contactNo) {
+      showToast("Patient Contact Number is Required.", 'alert', 3000);
       return;
     }
     // const incrementId = () => {
     //   setId(id + 1);
     // };
 
- 
-   const ranid=  Math.floor(Math.random()*1000000)
+
+    const ranid = Math.floor(Math.random() * 1000000)
     const obj = {
       id: ranid,
       // srNo: srNo,
@@ -101,7 +97,7 @@ const [contactNo, setContactNo] =useState('');
       bloodGroup: bloodGroup,
       city: city,
       contactNo: contactNo
-        };
+    };
 
     const newPatientList = [...patients, obj];
     setPatients(newPatientList);
@@ -186,7 +182,7 @@ const [contactNo, setContactNo] =useState('');
             </div>
             <div>
               {patients.map((patient, index) => {
-                const { id, patientName, age, city, bloodGroup,  contactNo} = patient;
+                const { id, patientName, age, city, bloodGroup, contactNo } = patient;
 
                 return <OpdPatientListCard
                   key={index}
@@ -195,7 +191,7 @@ const [contactNo, setContactNo] =useState('');
                   age={age}
                   bloodGroup={bloodGroup}
                   city={city}
-                 
+
                   contactNo={contactNo}
                   removePatientFromList={removePatientFromList}
                   setListEditable={setListEditable}
@@ -212,10 +208,10 @@ const [contactNo, setContactNo] =useState('');
             <h1 className='add-btn'><img src={add} />{isEdit ? `UPDATE ${id}` : 'ADD PATIENT'}</h1>
             <div>
               <div>
-            
+
                 <div className="add-patient-to-list-container">
                   <form>
-                   
+
                     <input
                       type="text"
                       value={patientName}
@@ -244,7 +240,7 @@ const [contactNo, setContactNo] =useState('');
                       placeholder="Blood Group."
                       className="task-input"
                     />
-                     <input
+                    <input
                       type="text"
                       value={city}
                       onChange={(e) => {
@@ -254,8 +250,8 @@ const [contactNo, setContactNo] =useState('');
                       placeholder="City"
                       className="task-input"
                     />
-                     
-                     <input
+
+                    <input
                       type="number"
                       value={contactNo}
                       onChange={(e) => {

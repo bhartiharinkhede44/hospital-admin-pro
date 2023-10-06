@@ -1,0 +1,21 @@
+.depertment-header{
+    width: 100%;
+}
+.img-hospital{
+    height: 70px;
+    margin-right: 10px;
+}
+.feture-text{
+    font-size: 15px;
+    margin-top: -5%;
+}
+.depara-body{
+    background-color: #f1f3f6;
+}
+.depara-container{
+    background-color: #f1f3f6;
+    display: flex;
+    justify-content: space-evenly ;
+    flex-wrap: wrap;
+}
+
