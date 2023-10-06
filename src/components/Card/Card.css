@@ -1,4 +1,4 @@
-.card:hover {
+.card-component:hover {
     transform: scale(1.04);
     transition: 1s;
     box-shadow: 2px 2px 5px 2px gray;
