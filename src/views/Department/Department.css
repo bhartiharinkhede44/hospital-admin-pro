@@ -18,4 +18,16 @@
     justify-content: space-evenly ;
     flex-wrap: wrap;
 }
+.card-container{
+    height: 400px;
+    background-color: #c6c6fd;
+    width: 400px;
+    margin-top: 30px;
+    padding: 20px;
+    border: none;
+    border-radius: 20px;
 
+}
+.dcard-img{
+    height: 200px;
+}

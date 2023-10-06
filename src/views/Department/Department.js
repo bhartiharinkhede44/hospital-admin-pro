@@ -21,19 +21,18 @@ const Department = () => {
           <div className='depara-container'>
             {
               Config.Department.map((serviceData, index) => {
-                const {title, img, value} = serviceData
+                const { title, img, description, value } = serviceData
 
-            return (
-            <div className='d-flex'>
-              <div className='card-container' key={index}>
-                <div className='card-department'>
-                  <img className="card-img" src={img} />
-                  <h3 className='card-title' style={{ color: Config.theme.primaryColor }}>{title}</h3>
-                  <h1 className='card-value'>{value}</h1>
-                </div>
-              </div>
-            </div>
-            )
+                return (
+                  <div class="card" style={{width:"18rem;"}}>
+                    <img src={img} class="card-img-top" alt="..."/>
+                      <div class="card-body">
+                        <h5 class="card-title">{title}</h5>
+                        <p class="card-text">{description}</p>
+                        
+                      </div>
+                  </div>
+                )
               })
             }
           </div>
