@@ -25,7 +25,7 @@ const Department = () => {
 
                 return (<>
                   <div className='maincar-container'>
-                    <div class="card">
+                    <div class="card card-contain">
                       <img src={img} class="card-img-top" alt="..." />
                       <div class="card-body">
                         <h5 class="card-title">{title}</h5>
