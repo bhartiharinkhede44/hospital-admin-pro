@@ -1,28 +1,28 @@
 import React, { useEffect, useState } from 'react';
-import { ipdpatientlist } from '../../data/ipdpatientlist';
-import IpdPatientListCard from './../../components/IpdPatientList/IpdPatientListCard';
-import IpdHeader from './../../components/IpdHeader/IpdHeader';
-import "./Ipd.css";
+import "./Appoinment.css"
+import { appoinmentpatient } from '../../data/appoinmentpatient';
 import Header from '../../components/Header/Header';
-import bed from './bed.png';
 import add from './add.png';
 import showToast from 'crunchy-toast';
-import { saveListToLocalStorage } from './../../data/localstorage';
+import { saveListToLocalStorageAppoinmentPatients } from './../../data/localstorage';
 import Sidebar from '../../components/Sidebar/Sidebar';
+import AppoinmentHeader from '../../components/AppoinmentHeader/AppoinmentHeader';
+import AppoinmentPatientcard from './../../components/AppoinmentPatientCard/AppoinmentPatientCar'
 
-function Ipd() {
+function OpdPatients() {
   const [patients, setPatients] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
 
   // const [srNo, setSrNo] = useState(1);
   const [id, setId] = useState(1);
   const [patientName, setPatientName] = useState('');
-  const [room, setRoom] = useState('');
-  const [bedNo, setBedNo] = useState('');
-  const [isEdit, setIsEdit] = useState('');
+ const [time, setTime] = useState('');
+  const [city, setCity] = useState('');
+  const [contactNo, setContactNo] = useState('');
+ const [department, setDepartment] = useState('');
 
   useEffect(() => {
-    const filteredPatients = ipdpatientlist.filter((patient) => {
+    const filteredPatients = appoinmentpatient.filter((patient) => {
       const name = patient.patientName.toLowerCase();
       const mobile = patient.id.toString();
       const query = searchTerm.toLowerCase();
@@ -33,7 +33,7 @@ function Ipd() {
   }, [searchTerm]);
 
   useEffect(() => {
-    const list = JSON.parse(localStorage.getItem('ipdlistpatient'));
+    const list = JSON.parse(localStorage.getItem('appoinmentlistpatient'));
     if (list && list.length >= 0) {
       setPatients(list);
     }
@@ -53,8 +53,11 @@ function Ipd() {
   const clearInputFields = () => {
     // setSrNo('');
     setPatientName('');
-    setRoom('');
-    setBedNo('');
+    setCity('');
+    setContactNo('');
+    setTime('');
+    setDepartment('');
+
   };
 
   const addPatientToList = () => {
@@ -63,33 +66,37 @@ function Ipd() {
     //   showToast("Sr Number is Required.",'alert', 3000);
     //   return;
     // }
-    if(!patientName)
-    {
-      showToast("patient name is Required.",'alert', 3000);
+    if (!patientName) {
+      showToast("patient name is Required.", 'alert', 3000);
       return;
     }
-    if(!room)
-    {
-      showToast("Room Type is Required.",'alert', 3000);
+    if (!time) {
+      showToast("time is Required.", 'alert', 3000);
       return;
     }
-    if(!bedNo)
-    {
-      showToast("Bed Number is Required.",'alert', 3000);
+    if (!city) {
+      showToast("Patient City is Required.", 'alert', 3000);
       return;
     }
-    // const incrementId = () => {
-    //   setId(id + 1);
-    // };
+    if (!contactNo) {
+      showToast("Patient Contact Number is Required.", 'alert', 3000);
+      return;
+    }
+    if (!department) {
+      showToast("Department name is Required.", 'alert', 3000);
+      return;
+    }
 
- 
-   const ranid=  Math.floor(Math.random()*1000000)
+
+    const ranid = Math.floor(Math.random() * 1000000)
     const obj = {
       id: ranid,
       // srNo: srNo,
       patientName: patientName,
-      room: room,
-      bedNo: bedNo
+      city: city,
+      contactNo: contactNo,
+      time: time,
+      department: department
     };
 
     const newPatientList = [...patients, obj];
@@ -97,7 +104,7 @@ function Ipd() {
 
     clearInputFields();
 
-    saveListToLocalStorage(newPatientList);
+    saveListToLocalStorageAppoinmentPatients(newPatientList);
     showToast('Patient added successfully', 'success', 3000);
   };
 
@@ -108,41 +115,11 @@ function Ipd() {
 
     setPatients(tempArray);
 
-    saveListToLocalStorage(tempArray);
+    saveListToLocalStorageAppoinmentPatients(tempArray);
     showToast('Task removed from list successfully', 'success', 3000);
   };
 
-  const setListEditable = (id) => {
-    setIsEdit(true);
-    setId(id);
 
-    const currentIndex = findIndexByListId(id);
-    const patient = patients[currentIndex]
-
-    setPatientName(patient.patientName);
-    setRoom(patient.room);
-    setBedNo(patient.bedNo);
-  };
-
-  const UpdateList = () => {
-    const indexToUpdate = findIndexByListId(id);
-
-    const tempArray = [...patients];
-    tempArray[indexToUpdate] = {
-      id: id,
-      // srNo: srNo,
-      patientName: patientName,
-      room: room,
-      bedNo: bedNo
-    };
-    setPatients(tempArray);
-    saveListToLocalStorage(tempArray);
-    showToast('Task updated successfully', 'success', 3000);
-
-    setId(-1);
-    clearInputFields();
-    setIsEdit(false);
-  };
 
   return (
     <>
@@ -150,7 +127,7 @@ function Ipd() {
         <div><Sidebar /></div>
         <div className='ipd-list-div'>
           <Header />
-          <div className='ipd-top-header d-flex'><img src={bed} /><h1 className='heading'>IPD Patient</h1></div>
+          <div className='ipd-top-header d-flex'><img src={add} /><h1 className='heading'>Appoinment Patients</h1></div>
 
           <div className='search-div d-flex'>
             <div>
@@ -166,21 +143,22 @@ function Ipd() {
 
           <div className='container-patient div-patient-list'>
             <div>
-              <IpdHeader />
+              <AppoinmentHeader />
             </div>
             <div>
               {patients.map((patient, index) => {
-                const { id, patientName, room, bedNo } = patient;
+                const { id, patientName, city, time, department, contactNo } = patient;
 
-                return <IpdPatientListCard
+                return <AppoinmentPatientcard
                   key={index}
-                  // srNo={srNo}
                   id={id}
                   patientName={patientName}
-                  room={room}
-                  bedNo={bedNo}
+                  city={city}
+
+                  contactNo={contactNo}
+                  time={time}
+                  department={department}
                   removePatientFromList={removePatientFromList}
-                  setListEditable={setListEditable}
                   index={index}
                 />
               })}
@@ -191,13 +169,13 @@ function Ipd() {
           </div>
           <hr />
           <div>
-            <h1 className='add-btn'><img src={add} />{isEdit ? `UPDATE ${id}` : 'ADD PATIENT'}</h1>
+            <h1 className='add-btn'><img src={add} />ADD PATIENT</h1>
             <div>
               <div>
-            
+
                 <div className="add-patient-to-list-container">
                   <form>
-                   
+
                     <input
                       type="text"
                       value={patientName}
@@ -210,29 +188,49 @@ function Ipd() {
 
                     <input
                       type="text"
-                      value={room}
+                      value={city}
                       onChange={(e) => {
-                        setRoom(e.target.value)
+                        setCity(e.target.value)
                       }}
-                      placeholder="Room (AC/NON-AC)"
+
+                      placeholder="City"
+                      className="task-input"
+                    />
+                    
+                    <input
+                      type="number"
+                      value={contactNo}
+                      onChange={(e) => {
+                        setContactNo(e.target.value)
+                      }}
+
+                      placeholder="Contact Number"
                       className="task-input"
                     />
                     <input
-                      type="number"
-                      value={bedNo}
+                      type="time"
+                      value={time}
                       onChange={(e) => {
-                        setBedNo(e.target.value)
+                        setTime(e.target.value)
                       }}
-
-                      placeholder="Bed No."
+                    
                       className="task-input"
                     />
-                    {
-                      isEdit ?
-                        <button className="btn-add-task buttons" type="button" onClick={UpdateList}>Update </button>
-                        :
-                        <button className="btn-add-task buttons" type="button" onClick={addPatientToList}>Add Patient</button>
-                    }
+                    <input
+                      type="text"
+                      value={department}
+                      onChange={(e) => {
+                        setDepartment(e.target.value)
+                      }}
+
+                      placeholder="Department"
+                      className="task-input"
+                    />
+
+
+
+                    <button className="btn-add-task" type="button" onClick={addPatientToList}>Add Patient</button>
+
                   </form>
                 </div>
               </div>
@@ -244,5 +242,5 @@ function Ipd() {
   );
 }
 
-export default Ipd;
+export default OpdPatients;
 

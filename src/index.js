@@ -11,6 +11,7 @@ import Department from './views/Department/Department';
 import Registration from './views/Registration/Registration'
 import { createBrowserRouter,RouterProvider} from 'react-router-dom';
 import OpdPatients from './views/Opd/Opd';
+import Appoinment from './views/Appoinment/Appoinment'
 
 const router =createBrowserRouter([
     {
