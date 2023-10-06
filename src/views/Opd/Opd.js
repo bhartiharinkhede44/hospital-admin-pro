@@ -5,7 +5,6 @@ import OpdHeader from './../../components/OpdHeader/OpdHeader';
 import "./Opd.css";
 import Header from '../../components/Header/Header';
 import bed from './opdP.png';
-// import update from './update.png'
 import add from './add.png';
 import showToast from 'crunchy-toast';
 import { saveListToLocalStorageOpdPatients } from './../../data/localstorage';
@@ -163,7 +162,7 @@ function OpdPatients() {
         <div><Sidebar /></div>
         <div className='ipd-list-div'>
           <Header />
-          <div className='ipd-top-header d-flex'><img src={bed} /><h1 className='heading'>OPD Patient</h1></div>
+          <div className='ipd-top-header d-flex'><img src={bed} className='png-bed'/><h1 className='heading'>OPD Patient</h1></div>
 
           <div className='search-div d-flex'>
             <div>

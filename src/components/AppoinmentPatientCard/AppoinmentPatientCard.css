@@ -10,18 +10,4 @@
 }
 .div-in{
     cursor: pointer;
-
-}
-.div-edit{
-  cursor: pointer;
-    color: #fff;
-    border-radius: 50%;
-    height: 50px;
-    width: 50px;
-}
-.activity-div{
-   display: flex;
-   justify-content: center;
-  margin-right: 10px;
-  margin-left: 20px;
 }

@@ -13,17 +13,17 @@
     padding: 15px;
     height: 90px;
     box-shadow: 0 4px 2px 0.5px gray;
-    padding-left: 27px;
+    
 
 }
 
 .heading {
     color: #3333ff;
-
 }
 
 .search {
-  height: 40px !important;
+    height: 40px !important;
+
     font-size: 15px;
 }
 
@@ -85,7 +85,4 @@ button{
 
 @media (max-width: 768px) {
     
-  }
-  .png-bed{
-    height: 50px;
   }
