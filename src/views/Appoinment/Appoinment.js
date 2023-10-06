@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { opdpatientlist } from '../../data/opdpatientlist'; 
-import OpdPatientListCard from './../../components/OpdPatientListCard/OpdPatientListCard';
-import OpdHeader from './../../components/OpdHeader/OpdHeader';
-import "./Opd.css";
+import "./Appoinment.css"
+import { appoinmentpatient } from '../../data/appoinmentpatient';
 import Header from '../../components/Header/Header';
-import bed from './opdP.png';
 import add from './add.png';
 import showToast from 'crunchy-toast';
-import { saveListToLocalStorageOpdPatients } from './../../data/localstorage';
+import { saveListToLocalStorageAppoinmentPatients } from './../../data/localstorage';
 import Sidebar from '../../components/Sidebar/Sidebar';
+import AppoinmentHeader from '../../components/AppoinmentHeader/AppoinmentHeader';
+import AppoinmentPatientcard from './../../components/AppoinmentPatientCard/AppoinmentPatientCar'
 
 function OpdPatients() {
   const [patients, setPatients] = useState([]);
@@ -17,14 +16,13 @@ function OpdPatients() {
   // const [srNo, setSrNo] = useState(1);
   const [id, setId] = useState(1);
   const [patientName, setPatientName] = useState('');
-const [age, setAge] = useState('');
-const [bloodGroup, setBloodGroup] = useState('');
-const [city, setCity] = useState('');
-const [contactNo, setContactNo] =useState('');
-  const [isEdit, setIsEdit] = useState('');
+ const [time, setTime] = useState('');
+  const [city, setCity] = useState('');
+  const [contactNo, setContactNo] = useState('');
+ const [department, setDepartment] = useState('');
 
   useEffect(() => {
-    const filteredPatients = opdpatientlist.filter((patient) => {
+    const filteredPatients = appoinmentpatient.filter((patient) => {
       const name = patient.patientName.toLowerCase();
       const mobile = patient.id.toString();
       const query = searchTerm.toLowerCase();
@@ -35,7 +33,7 @@ const [contactNo, setContactNo] =useState('');
   }, [searchTerm]);
 
   useEffect(() => {
-    const list = JSON.parse(localStorage.getItem('opdlistpatient'));
+    const list = JSON.parse(localStorage.getItem('appoinmentlistpatient'));
     if (list && list.length >= 0) {
       setPatients(list);
     }
@@ -55,10 +53,11 @@ const [contactNo, setContactNo] =useState('');
   const clearInputFields = () => {
     // setSrNo('');
     setPatientName('');
-    setAge('');
-    setBloodGroup('');
     setCity('');
     setContactNo('');
+    setTime('');
+    setDepartment('');
+
   };
 
   const addPatientToList = () => {
@@ -67,48 +66,45 @@ const [contactNo, setContactNo] =useState('');
     //   showToast("Sr Number is Required.",'alert', 3000);
     //   return;
     // }
-    if(!patientName)
-    {
-      showToast("patient name is Required.",'alert', 3000);
+    if (!patientName) {
+      showToast("patient name is Required.", 'alert', 3000);
       return;
     }
-    if(!age)
-    {
-      showToast("Patient age is Required.",'alert', 3000);
+    if (!time) {
+      showToast("time is Required.", 'alert', 3000);
       return;
     }
-    if(!city)
-    {
-      showToast("Patient City is Required.",'alert', 3000);
+    if (!city) {
+      showToast("Patient City is Required.", 'alert', 3000);
       return;
     }
-    if(!contactNo)
-    {
-      showToast("Patient Contact Number is Required.",'alert', 3000);
+    if (!contactNo) {
+      showToast("Patient Contact Number is Required.", 'alert', 3000);
       return;
     }
-    // const incrementId = () => {
-    //   setId(id + 1);
-    // };
+    if (!department) {
+      showToast("Department name is Required.", 'alert', 3000);
+      return;
+    }
 
- 
-   const ranid=  Math.floor(Math.random()*1000000)
+
+    const ranid = Math.floor(Math.random() * 1000000)
     const obj = {
       id: ranid,
       // srNo: srNo,
       patientName: patientName,
-      age: age,
-      bloodGroup: bloodGroup,
       city: city,
-      contactNo: contactNo
-        };
+      contactNo: contactNo,
+      time: time,
+      department: department
+    };
 
     const newPatientList = [...patients, obj];
     setPatients(newPatientList);
 
     clearInputFields();
 
-    saveListToLocalStorageOpdPatients(newPatientList);
+    saveListToLocalStorageAppoinmentPatients(newPatientList);
     showToast('Patient added successfully', 'success', 3000);
   };
 
@@ -119,46 +115,11 @@ const [contactNo, setContactNo] =useState('');
 
     setPatients(tempArray);
 
-    saveListToLocalStorageOpdPatients(tempArray);
+    saveListToLocalStorageAppoinmentPatients(tempArray);
     showToast('Task removed from list successfully', 'success', 3000);
   };
 
-  const setListEditable = (id) => {
-    setIsEdit(true);
-    setId(id);
 
-    const currentEditlist = findIndexByListId(id);
-    // setSrNo(currentEditlist.srNo);
-    setPatientName(currentEditlist.patientName);
-    setAge(currentEditlist.age);
-    setBloodGroup(currentEditlist.bloodGroup);
-    setCity(currentEditlist.city);
-    setContactNo(currentEditlist.contactNo);
-
-    console.log(currentEditlist);
-  };
-
-  const UpdateList = () => {
-    const indexToUpdate = findIndexByListId(id);
-
-    const tempArray = [...patients];
-    tempArray[indexToUpdate] = {
-      id: id,
-      // srNo: srNo,
-      patientName: patientName,
-      age: age,
-      bloodGroup: bloodGroup,
-      city: city,
-      contactNo: contactNo
-    };
-    setPatients(tempArray);
-    saveListToLocalStorageOpdPatients(tempArray);
-    showToast('Task updated successfully', 'success', 3000);
-
-    setId(-1);
-    clearInputFields();
-    setIsEdit(false);
-  };
 
   return (
     <>
@@ -166,7 +127,7 @@ const [contactNo, setContactNo] =useState('');
         <div><Sidebar /></div>
         <div className='ipd-list-div'>
           <Header />
-          <div className='ipd-top-header d-flex'><img src={bed} /><h1 className='heading'>OPD Patient</h1></div>
+          <div className='ipd-top-header d-flex'><img src={add} /><h1 className='heading'>Appoinment Patients</h1></div>
 
           <div className='search-div d-flex'>
             <div>
@@ -182,23 +143,22 @@ const [contactNo, setContactNo] =useState('');
 
           <div className='container-patient div-patient-list'>
             <div>
-              <OpdHeader />
+              <AppoinmentHeader />
             </div>
             <div>
               {patients.map((patient, index) => {
-                const { id, patientName, age, city, bloodGroup,  contactNo} = patient;
+                const { id, patientName, city, time, department, contactNo } = patient;
 
-                return <OpdPatientListCard
+                return <AppoinmentPatientcard
                   key={index}
                   id={id}
                   patientName={patientName}
-                  age={age}
-                  bloodGroup={bloodGroup}
                   city={city}
-                 
+
                   contactNo={contactNo}
+                  time={time}
+                  department={department}
                   removePatientFromList={removePatientFromList}
-                  setListEditable={setListEditable}
                   index={index}
                 />
               })}
@@ -209,13 +169,13 @@ const [contactNo, setContactNo] =useState('');
           </div>
           <hr />
           <div>
-            <h1 className='add-btn'><img src={add} />{isEdit ? `UPDATE ${id}` : 'ADD PATIENT'}</h1>
+            <h1 className='add-btn'><img src={add} />ADD PATIENT</h1>
             <div>
               <div>
-            
+
                 <div className="add-patient-to-list-container">
                   <form>
-                   
+
                     <input
                       type="text"
                       value={patientName}
@@ -225,26 +185,8 @@ const [contactNo, setContactNo] =useState('');
                       placeholder="Enter Patient Name"
                       className="task-input"
                     />
-                    <input
-                      type="number"
-                      value={age}
-                      onChange={(e) => {
-                        setAge(e.target.value)
-                      }}
-                      placeholder="Enter Age"
-                      className="task-input"
-                    />
-                    <input
-                      type="text"
-                      value={bloodGroup}
-                      onChange={(e) => {
-                        setBloodGroup(e.target.value)
-                      }}
 
-                      placeholder="Blood Group."
-                      className="task-input"
-                    />
-                     <input
+                    <input
                       type="text"
                       value={city}
                       onChange={(e) => {
@@ -254,8 +196,8 @@ const [contactNo, setContactNo] =useState('');
                       placeholder="City"
                       className="task-input"
                     />
-                     
-                     <input
+                    
+                    <input
                       type="number"
                       value={contactNo}
                       onChange={(e) => {
@@ -265,12 +207,30 @@ const [contactNo, setContactNo] =useState('');
                       placeholder="Contact Number"
                       className="task-input"
                     />
-                    {
-                      isEdit ?
-                        <button className="btn-add-task" type="button" onClick={UpdateList}>Update </button>
-                        :
-                        <button className="btn-add-task" type="button" onClick={addPatientToList}>Add Patient</button>
-                    }
+                    <input
+                      type="time"
+                      value={time}
+                      onChange={(e) => {
+                        setTime(e.target.value)
+                      }}
+                    
+                      className="task-input"
+                    />
+                    <input
+                      type="text"
+                      value={department}
+                      onChange={(e) => {
+                        setDepartment(e.target.value)
+                      }}
+
+                      placeholder="Department"
+                      className="task-input"
+                    />
+
+
+
+                    <button className="btn-add-task" type="button" onClick={addPatientToList}>Add Patient</button>
+
                   </form>
                 </div>
               </div>

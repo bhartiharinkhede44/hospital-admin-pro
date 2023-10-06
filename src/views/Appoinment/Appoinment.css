@@ -13,13 +13,13 @@
     padding: 15px;
     height: 90px;
     box-shadow: 0 4px 2px 0.5px gray;
-
+    
 
 }
 
 .heading {
     color: #3333ff;
-
+font-weight: bold;
 }
 
 .search {
@@ -67,16 +67,14 @@ padding-left: 10px;
     flex-wrap: wrap;
     height: 200px;
 }
-.buttons{
+button{
     background-color: #3333ff;
     color: white;
     padding: 10px 20px;
     border-radius: 10px;
     border: none;
-    display: block;
-    margin-right: auto;
-  margin-top: 20px;
-    margin-left: auto;
+ margin-top: -70px;
+ margin-left: 30px;
 
 }
 .div-patient-list{

@@ -7,11 +7,12 @@ import Home from './views/Home/Home'
 import DashBoard from './views/DashBoard/DashBoard'
 import Ipd from './views/Ipd/Ipd'
 import Department from './views/Department/Department';
-import LoginPage from './views/LoginPage/LoginPage'
-import PatientDetail from './views/PatientDetails/PatientDetail'
-import Registration from './views/Registration/Registration'
+// import LoginPage from './views/LoginPage/LoginPage'
+// import PatientDetail from './views/PatientDetails/PatientDetail'
+// import Registration from './views/Registration/Registration'
 import { createBrowserRouter,RouterProvider} from 'react-router-dom';
 import OpdPatients from './views/Opd/Opd';
+import Appoinment from './views/Appoinment/Appoinment'
 
 const router =createBrowserRouter([
     {
@@ -29,9 +30,14 @@ const router =createBrowserRouter([
     {
         path:"/deparment",
         element:<Department/>
-    }, {
+    }, 
+    {
         path:"/opd",
-        element:<OpdPatients/>
+        element:<OpdPatients />
+    },
+    {
+        path:"/app",
+        element:<Appoinment />
     }
 
 ])
