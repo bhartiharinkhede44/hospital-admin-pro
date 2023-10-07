@@ -11,8 +11,7 @@ function RegPatient({
   city,
   date,
   removePatientList,
-  obj,
-}) {
+  }) {
   return (
     <>
       <div className=" d-flex justify-content-center ">
@@ -45,7 +44,7 @@ function RegPatient({
               <div className="col-md-2">
                 <span className="delet-icon"
                   onClick={() => {
-                    removePatientList(obj);
+                    removePatientList(id);
                   }}
                 >
                   🗑️
