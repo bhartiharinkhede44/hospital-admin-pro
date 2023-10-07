@@ -11,8 +11,9 @@ function SignUp() {
 
   
   function handleSubmit() {
+
     if (password === currentPassword) {
-      showToast(" signup successfull.",'alert', 3000);
+      showToast(" signup successfull.",'success', 3000);
     } else {
       showToast("Password do not Match.",'alert', 3000);
   };
@@ -23,6 +24,8 @@ function SignUp() {
 
     }
     localStorage.setItem("user", JSON.stringify(data));
+    window.location.href = "/dashBoard"
+    
   }
   return (
     <div className='signup-container'>
@@ -57,7 +60,7 @@ function SignUp() {
           }} /><br /><br />
 
       </form>
-      <button onClick={handleSubmit}>submit</button>
+      <button onClick={handleSubmit} className='btnsubmit'>submit</button>
 
    
     </div >

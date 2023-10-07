@@ -5,18 +5,22 @@ import showToast from 'crunchy-toast';
 
 function LoginPage() {
   const [Email, setEmail] = useState('');
-  const [password, setPassword] = useState('')
+  const [Password, setPassword] = useState('')
 
-  const data = {
-    Email,
-    password
 
-  }
   function handleLogin() {
-    
-    localStorage.getItem('user', JSON.parse(data));
+
+    const local = JSON.parse(localStorage.getItem("user"))
+
+    if (local.email === Email && local.password === Password) {
+      alert('Login successfully');
+
+    } else {
+      setPassword('Invalid email password');
+    }
+
   }
-  
+
 
   return (
     <div className="login-container ">
@@ -26,7 +30,7 @@ function LoginPage() {
           placeholder="enter email"
           onChange={(e) => {
             setEmail(e.target.value);
-            localStorage.setItem('user', Email);
+
 
           }} /><br /><br />
         <label className="name">Password:</label>
@@ -34,7 +38,7 @@ function LoginPage() {
           placeholder="enter password"
           onChange={(e) => {
             setPassword(e.target.value);
-            localStorage.setItem('user', password);
+
 
           }} /><br /><br />
         <button onClick={handleLogin}>Login</button>
