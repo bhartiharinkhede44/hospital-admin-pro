@@ -52,13 +52,11 @@ const router =createBrowserRouter([
    {
     path:"/contact",
     element:<Contact/>
-   },
- {
+    },
+{
     path:"/login",
     element:<LoginPage/>
-
    }
-
 
 ])
 
