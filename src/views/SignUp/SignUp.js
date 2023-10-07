@@ -14,12 +14,14 @@ function SignUp() {
 
 
   function handleSubmit() {
-    
-    
 
-    
+    if (!fullname || !email || !password || !hospitalName || !currentPassword) {
+      showToast(`please fill all the field !`, `warning`, 3000);
+    };
+
+
     if (password === currentPassword) {
-      showToast(" signup successfull.", 'success', 3000);
+      showToast(" login successfull.",'success', 3000);
     } else {
       showToast("Password do not Match.", 'alert', 3000);
     };
@@ -31,7 +33,7 @@ function SignUp() {
 
     }
     localStorage.setItem("user", JSON.stringify(data));
-
+    
 
   }
   return (
@@ -64,13 +66,13 @@ function SignUp() {
               setHospitalName(e.target.value)
             }} placeholder='Enter hospital name' required
           /><br /><br />
-          <label className='password'>Password:</label><br />
+          <label className="name">Password:</label><br />
           <input type='password' className='inputset' required
             onChange={(e) => {
               setPassword(e.target.value)
             }}
           /><br /><br />
-          <label>Confirm Password:</label><br/>
+          <label className="name">Confirm Password:</label><br />
           <input type='password' className='inputset' required
             onChange={(e) => {
               setCurrentPassword(e.target.value)

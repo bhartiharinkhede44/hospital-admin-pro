@@ -1,0 +1,40 @@
+{
+    "title":"Services",
+    "text":"Services Information",
+    "theme":{
+        "primaryColor":"#3333ff",
+        "secondaryColor":"#b35900",
+        "accentColor":"ccf5ff"
+    },
+    "Services":[
+        {
+            "title":"Blood Service",
+            "img" : "https://www.uab.edu/news/images/2018/ER.3.jpg",
+            "mobile": "226546 ,557789",
+            "email":"bloodcontainer123@gmail.com"
+        },
+        {
+            "title":"Tiffin Service",
+            "img": "",
+            "mobile":"",
+            "email":"tiffinservice36@gmail.com"
+
+        },
+        {
+            "title":"Abulance Service",
+            "img": "https://www.v2020eresource.org/content/sitenews/news112007/images/sitenews.jpg",
+            "description": " other healthcare professionals who provide medical consultations and other services to patients."  
+        },
+        {
+            "title":"Fruits Services",
+            "img": "https://molekule.com/cdn/shop/articles/Hospital-Patients_2000x.jpg?v=1687471596",
+            "description": "The intensive care unit (ICU) is a specialized department in the hospital that provides critical care to patients who are in life-threatening conditions or require constant monitoring and treatment. The ICU is staffed by critical care physicians, nurses, and other healthcare providers who are trained to provide intensive medical care to patients. "  
+            
+        
+      
+        }
+       
+
+                                       
+    ]
+}

@@ -2,6 +2,7 @@ import "./LoginPage.css"
 import React from 'react'
 import { useState } from "react";
 import showToast from 'crunchy-toast';
+import { Link } from "react-router-dom";
 
 function LoginPage() {
   const [Email, setEmail] = useState('');
@@ -14,6 +15,7 @@ function LoginPage() {
     
     if (local.email === Email && local.password === Password) {
       showToast(" login successfull.",'success', 3000);
+      window.location.pathname()
 
     } else {
       showToast("Password do not Match.",'alert', 3000);
@@ -44,9 +46,9 @@ function LoginPage() {
 
           }} /><br /><br />
            <input type="checkbox" className="checkbox" required/>Remember Me <br/>
-        <button onClick={handleLogin} className="loginbttn">Login</button>
+        <button onClick={handleLogin} className="loginbttn"><Link to="/dashboard"></Link>Login</button>
 
-
+        <p className='text'> New User then ? <Link to="/signup" className='link-login'>SignUp</Link></p>
       </form>
       </div>
     </div>

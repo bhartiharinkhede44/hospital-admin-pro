@@ -25,7 +25,7 @@ function Navbar() {
           <Link to="/contact" className="nav-link text-light" href="#">Contact</Link>
         </li>
       </ul>
-      <Link to="/signup"> <p className="loginbtn"> Signup,login</p></Link>
+      <Link to="/signup"> <p className="loginbtn"> Signup</p></Link>
       
     </div>
   </div>
