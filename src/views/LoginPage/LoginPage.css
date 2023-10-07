@@ -1,0 +1,15 @@
+.main-login-container{
+    height: 100vh;
+    
+    background: rgb(63,165,251);
+background: radial-gradient(circle, rgba(63,165,251,1) 0%, rgba(70,252,198,1) 100%);
+}
+.side-container-login{
+    background: rgb(63,165,251);
+    border: solid;
+    height: 400px;
+    width: 300px;
+}
+/* .login-container{
+
+} */

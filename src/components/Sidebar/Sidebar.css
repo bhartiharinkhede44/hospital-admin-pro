@@ -61,10 +61,22 @@ top: 0;
 .sidebar-navlinks ul li{
    margin-top: 25px;
    list-style: none;
+   text-align: start;
+   font-size: 20px;
 } 
 .logo{
     height: 100px;
     display: block;
     padding-top: 25px;
     background-color: #c6c6fd;
+}
+.text{
+    text-decoration: none;
+    color: white;
+}
+.list{
+    font-size: 20px;
+}
+.icon{
+    height: 30px;
 }

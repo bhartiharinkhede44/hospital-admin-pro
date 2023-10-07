@@ -8,6 +8,7 @@ import Imgemail from "./image/email.jpg"
 import Imglocation from "./image/loca.jpg"
 import Imgform from "./image/formimg.jpg"
 import Imghos2 from "./image/hos2.jpg"
+import Imgmessege from "./image/newmessege.png"
 import Footer from "./../../components/Footer/Footer"
 import Navbar from "../../components/Navbar/Navbar";
 export default function Contact() {
@@ -17,9 +18,9 @@ export default function Contact() {
                 <Navbar/>
                 <div className="nav-head-contact">
 
-                    <div >  <img src={Imglogo} alt="logo" className="con-logo" /> </div>
-                    <div >   <b><span className="nametext">  PATIL GROUP OF  HOSPITAL</span> </b></div>
-                    <div>  <img src={Imglogo2} alt="logo" className="con-logo" /> </div>
+                   
+                    <div >   <span className="nametext">  Patil Multispeciality Hospital</span> </div>
+                   
                 </div>
 
                 <div>
@@ -28,7 +29,7 @@ export default function Contact() {
                 </div>
                 <div className="con-numbers">
                     <div className="con-text2 " >
-                        <img src={Imgcell} className="cell" /> <span className="h4">PHONE </span> 
+                         <i class="bi bi-telephone"></i><span className="h4">PHONE </span> 
 
                     </div>
                     <div className="con-text2" >
@@ -48,12 +49,12 @@ export default function Contact() {
 
                 <div className="fourth-cont">
                     <div className="con-text3">
-                        <img src={Imgemail} className="third-logo" /> <span className="text7"> EMAIL</span><br />
+                    <i class="bi bi-envelope-at-fill"></i> <span className="text7"> <span className="emailtext"> Email</span></span><br />
                         <p> patilgroupakrudi786@gmail.com</p>
 
                     </div>
                     <div className="con-text3">
-                        <img src={Imglocation} className="third-logo" />  <span className="text7">   Address</span><br />
+                    <i class="bi bi-geo-alt-fill"></i> <span className="text7">   Address</span><br />
                         <p>
                             Patilhospital ,ambedkar chowk ,pimpri-chinchwad.
                         </p>
@@ -62,33 +63,33 @@ export default function Contact() {
                 </div>
                 <div className="loca-embede">
                     <div className="form">
-                        <div class="mb-3">
+                        <div className="mb-3">
                             <span> <span className="cn-text1"><b>Message Us </b> </span> </span><br />
 
-                            <label for="exampleFormControlInput1" class="form-label">Full name</label>
+                            <label for="exampleFormControlInput1" className="form-label">Full name</label>
                             <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="full name " />
 
-                            <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" />
+                            <label for="exampleFormControlInput1" className="form-label">Email address</label>
+                            <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="abcd@example.com" />
                         </div>
                         <div class="mb-3">
-                            <label for="exampleFormControlTextarea1" class="form-label">Your messeges</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            <label for="exampleFormControlTextarea1" className="form-label">Your messeges</label>
+                            <textarea className="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                         </div>
                         <br/>
                         <button className=" btn btn-primary"> SEND</button>
 
                     </div>
                     <div className="form2">
-                        <img src={Imgform} className="img-form" />
+                        <img src={Imgmessege} className="img-form" />
 
                     </div>
 
 
                 </div>
                 
-
-              <Footer/>
+                    <div className="footersec">    <Footer/></div>
+             
 
             </div>
 

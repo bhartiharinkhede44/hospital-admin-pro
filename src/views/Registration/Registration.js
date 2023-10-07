@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import RegPatient from "../../components/RegPatient/RegPatient";
 import Dashboard from "../../components/Sidebar/Sidebar";
 import Header from "../../components/Header/Header";
@@ -24,6 +24,20 @@ function Registration() {
   const [city, setCity] = useState("");
   const [date, setDate] = useState("");
 
+  // loadPatientfromLocalStorage
+  useEffect(() => {
+    const patient = JSON.parse(localStorage.getItem("patientlist"));
+
+    if (patient && patient.lenght > 0) {
+      setRegisterPatient(patient);
+    }
+  }, []);
+
+  // savePatientToLocalStorage
+  const savePatientToLocalStorage = (patients) => {
+    localStorage.setItem("patientlist", JSON.stringify(patients));
+  };
+
   // add addPatientToList
   const addPatientToList = () => {
     const randomId = Math.floor(Math.random() * 1000);
@@ -37,14 +51,34 @@ function Registration() {
       contactnumber: contactnumber,
       date: date,
     };
-    console.log(obj);
-    setRegisterPatient([...registerPatient, obj]);
+
+    const newRegPatientList = [...registerPatient, obj];
+    setRegisterPatient(newRegPatientList);
+    setCity("");
     setPatientName("");
     setGneder("");
     setBloodGroup("");
     setAge("");
     setContactNumber("");
     setDate("");
+
+    savePatientToLocalStorage(newRegPatientList);
+  };
+
+  // Delete Task Button
+  const removePatientList = (id) => {
+    let index;
+    registerPatient.forEach((task, i) => {
+      if (task.id === id) {
+        index = i;
+      }
+    });
+
+    const tempArray = registerPatient;
+    tempArray.splice(index, 1);
+
+    setRegisterPatient([...tempArray]);
+    savePatientToLocalStorage(tempArray);
   };
 
   return (
@@ -58,7 +92,7 @@ function Registration() {
 
           <div className="ipd-top-header d-flex">
             <img src={add} />
-            <h1 className="heading">PATIENT REGISTRATION</h1>
+            <h1 className="heading">PATIENT REGISTRATION {city}</h1>
           </div>
 
           <div className="container p-5 mt- shadow border-black  add-patient-list ">
@@ -129,6 +163,7 @@ function Registration() {
                           value={city}
                           onChange={(e) => {
                             setCity(e.target.value);
+                            console.log(e.target.value);
                           }}
                         />
                       </div>
@@ -153,7 +188,6 @@ function Registration() {
                       type="date"
                       className="form-control"
                       id="inputtext2"
-                      placeholder=""
                       value={date}
                       onChange={(e) => {
                         setDate(e.target.value);
@@ -178,7 +212,7 @@ function Registration() {
             <div className="container mt-5">
               <h1>REGISTRATION PATIENT</h1>
 
-              {registerPatient.map((patient, i) => {
+              {registerPatient.map((patient, index) => {
                 const {
                   patientname,
                   gender,
@@ -191,14 +225,16 @@ function Registration() {
                 return (
                   <div>
                     <RegPatient
-                      key={i}
                       patientname={patientname}
                       gender={gender}
                       age={age}
                       bloodgroup={bloodgroup}
                       contactnumber={contactnumber}
-                      city={city}
                       date={date}
+                      key={index}
+                      removePatientList={removePatientList}
+                      obj={registerPatient}
+                      city={city}
                     />
                   </div>
                 );

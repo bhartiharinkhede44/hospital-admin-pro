@@ -26,19 +26,19 @@ export default function DoctorModule(){
                 <div className="conatiner-bodypart">
                   {
                     Doctorinfo.map( (doctordata)=>{
-                        const { id ,name ,speciality, degree ,age } = doctordata;
+                        const { id ,name ,speciality, degree ,age,image } = doctordata;
                         return(
                           <>
                             <div className="cardcontainer">
                                
-                                <div class="box">
+                                <div class="box-doct">
             
                                       <p> <span className="text2">Id : </span> <span className="text"> {id} </span> </p>
                                       <p> <span className="text2"> Name :</span>   <span className="text">  {name} </span> </p>
                                       <p> <span className="text2"> speciality :</span>   <span className="text"> {speciality} </span>   </p>
                                       <p>  <span className="text2"> age:  </span>  <span className=" text">{age} </span> </p>
                                       <p> <span className="text2"> degree : </span>    <span className=" text">{degree} </span></p>
-                                      <img  src="./img/download1.jpeg" class="imgdoc"/> 
+                                      <img  src={image} class="imgdoc"/> 
              
                                  </div>
                                

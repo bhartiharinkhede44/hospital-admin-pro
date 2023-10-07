@@ -9,7 +9,7 @@ import Sidebar from '../../components/Sidebar/Sidebar';
 import AppoinmentHeader from '../../components/AppoinmentHeader/AppoinmentHeader';
 import AppoinmentPatientcard from './../../components/AppoinmentPatientCard/AppoinmentPatientCar'
 
-function OpdPatients() {
+function Appoinment() {
   const [patients, setPatients] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -242,5 +242,5 @@ function OpdPatients() {
   );
 }
 
-export default OpdPatients;
+export default Appoinment;
 
