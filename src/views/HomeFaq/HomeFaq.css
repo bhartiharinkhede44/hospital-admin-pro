@@ -1,0 +1,13 @@
+.div-card-faq{
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 50px;
+}
+.question{
+    color: blue;
+    font-weight: bold;
+
+}
+.ans{
+    font-size: 20px;
+}

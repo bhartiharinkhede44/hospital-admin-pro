@@ -17,6 +17,7 @@ import LoginPage from './views/LoginPage/LoginPage';
 import PatientDetail from './views/PatientDetail/PatientDetail';
 import Contact  from './views/Contact/Contact';
 import Appoinment from './views/Appoinment/Appoinment';
+import Faq from './views/HomeFaq/HomeFaq'
 
 
 const router = createBrowserRouter([
@@ -71,14 +72,10 @@ const router = createBrowserRouter([
     {
         path: "/signup",
         element: <SignUp />
-    // }, 
-    // {
-    //     path: "/service",
-    //     element: <Service />
-    // {
-    //     path: "/faq",
-    //     element: <Faq />
-    // },
+    },
+    {
+        path: "/faq",
+        element: <Faq />
     }
    
 
