@@ -42,7 +42,7 @@ export default function Dashboard(){
                 <li> <i cllassName="bi bi-clipboard2-check"></i> Registration </li>
                 <li> <i cllassName="bi bi-clipboard2-check"></i> IPD Patients </li>
                 <li> <i cllassName="bi bi-clipboard2-check"></i> OPD Painents </li>
-                <li> <i cllassName="bi bi-clipboard2-check"></i> Prescription</li>
+                <li> <i cllassName="bi bi-clipboard2-check"></i> Patient Details</li>
                 <li> <i cllassName="bi bi-clipboard2-check"></i> Services</li>
 
             </ul>

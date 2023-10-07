@@ -24,9 +24,9 @@ function Ipd() {
   useEffect(() => {
     const filteredPatients = ipdpatientlist.filter((patient) => {
       const name = patient.patientName.toLowerCase();
-      const mobile = patient.id.toString();
+      const id = patient.id.toString();
       const query = searchTerm.toLowerCase();
-      return name.includes(query) || mobile.includes(query);
+      return name.includes(query) || id.includes(query);
     });
 
     setPatients(filteredPatients);
