@@ -7,7 +7,7 @@ function Navbar() {
 
   return (
     <div>
-      <nav className="navbar navbar-expand-lg bg-primary p-3">
+      <nav className="navbar navbar-expand-lg bg-primary p-4">
   <div className="container-fluid ">
     <a className="navbar-brand text-light fs-2" href="#">Hospital-Admine-Pro</a>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -16,17 +16,16 @@ function Navbar() {
     <div className="collapse navbar-collapse" id="navbarText">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0 " >
         <li className="nav-item ">
-          <Link className="nav-link active text-light fs-5 ms-5" aria-current="page" to="/home">Home</Link>
+          <a className="nav-link active text-light" aria-current="page" href="#">Home</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link text-light fs-5 ms-3" href="#">About</a>
+          <a className="nav-link text-light" href="#">About</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link text-light fs-5 ms-3" href="#">Contact</a>
+          <a className="nav-link text-light" href="#">Contact</a>
         </li>
       </ul>
-      <Link to="/signup"><p className="loginbtn fs-5">Sign Up</p></Link>
-      <Link to="/login"> <p className="loginbtn1 fs-5">login</p></Link>
+      <p className="loginbtn">login</p>
     </div>
   </div>
 </nav>

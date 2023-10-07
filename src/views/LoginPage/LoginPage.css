@@ -1,15 +1,35 @@
 .main-login-container{
+    background-image: url('./login-background-img.jpg');
     height: 100vh;
-    
-    background: rgb(63,165,251);
-background: radial-gradient(circle, rgba(63,165,251,1) 0%, rgba(70,252,198,1) 100%);
-}
-.side-container-login{
-    background: rgb(63,165,251);
-    border: solid;
-    height: 400px;
-    width: 300px;
-}
-/* .login-container{
+    background-size: cover;
+    background-repeat: no-repeat;
 
-} */
+}
+.login-container{
+    width: 400px;
+   height: 300px;
+   border:solid;
+   padding: 20px;
+   display: block;
+   margin-left: 700px;
+   margin-top: 90px;
+   border-radius: 20px;
+}
+.inputbox{
+    width: 400px;
+    padding: 9px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(242, 245, 248);
+    box-shadow: 1px 1px 2px 1px gray;
+}
+.name{
+color: black;
+    font-weight: bold;
+}
+.loginbttn{
+    margin-top: 10px;
+    width: 200px;
+    font-weight: bold;
+}
+
