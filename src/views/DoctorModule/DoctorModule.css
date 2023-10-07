@@ -33,16 +33,16 @@
     font-size: 17px;
     color: rgb(96, 91, 91);
 }
-.text{
-    font-size: 20px;
-    color: blue;
+.text-a{
+    font-size: 18px;
+    color: black;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .imgdoc{
     height: 150px;
    position: relative;
    left: 280px;
-   bottom:240px;
+   bottom:222px;
    border-radius: 10px;
 
 }

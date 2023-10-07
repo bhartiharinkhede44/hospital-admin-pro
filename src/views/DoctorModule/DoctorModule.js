@@ -32,12 +32,12 @@ export default function DoctorModule(){
                             <div className="cardcontainer">
                                
                                 <div class="box-doct">
-            
-                                      <p> <span className="text2">Id : </span> <span className="text"> {id} </span> </p>
-                                      <p> <span className="text2"> Name :</span>   <span className="text">  {name} </span> </p>
-                                      <p> <span className="text2"> speciality :</span>   <span className="text"> {speciality} </span>   </p>
-                                      <p>  <span className="text2"> age:  </span>  <span className=" text">{age} </span> </p>
-                                      <p> <span className="text2"> degree : </span>    <span className=" text">{degree} </span></p>
+          
+                                      <p> <span className="text2">Id : </span> <span className="text-a"> {id} </span> </p>
+                                      <p> <span className="text2"> Name :</span>   <span className="text-a">  {name} </span> </p>
+                                      <p> <span className="text2"> speciality :</span>   <span className="text-a"> {speciality} </span>   </p>
+                                      <p>  <span className="text2"> age:  </span>  <span className=" text-a">{age} </span> </p>
+                                      <p> <span className="text2"> degree : </span>    <span className=" text-a">{degree} </span></p>
                                       <img  src={image} class="imgdoc"/> 
              
                                  </div>
