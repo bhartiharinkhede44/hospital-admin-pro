@@ -11,7 +11,8 @@ import Department from './views/Department/Department';
 import Registration from './views/Registration/Registration'
 import { createBrowserRouter,RouterProvider} from 'react-router-dom';
 import OpdPatients from './views/Opd/Opd';
-
+import DoctorModule from './views/DoctorModule/DoctorModule'
+import SignUp from './views/SignUp/SignUp';
 
 const router =createBrowserRouter([
     {
@@ -38,7 +39,14 @@ const router =createBrowserRouter([
         path:"/reg",
         element:<Registration />
     },
-   
+   {
+    path:"/doctormodule",
+    element:<DoctorModule/>
+   },
+   {
+    path:"/signup",
+    element:<SignUp/>
+   }
 
 ])
 

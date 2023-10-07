@@ -2,9 +2,11 @@ import "./Navbar.css";
 import React from 'react'
 
 function Navbar() {
+
+
   return (
     <div>
-      <nav class="navbar navbar-expand-lg bg-primary ">
+      <nav class="navbar navbar-expand-lg bg-primary p-3">
   <div class="container-fluid ">
     <a class="navbar-brand text-light" href="#">Hospital-Admine-Pro</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
