@@ -1,12 +1,54 @@
-.signup-container{
-   height: 400px;
-   width: 300px;
-   background-color: #fff;
-   border:1px solid;
-   padding: 15px;
-   box-shadow: 2px 2px 5px 2px gray;
+.main{
+    background-image: url('./poster1.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+
 }
+.signup-container{
+   
+   width: 400px;
+margin-left: 100px;
+   border:none;
+   padding: 40px;
+   display: block;
+ 
+   margin-top: 80px;
+   border-radius: 20px;
+  
+}
+.hea-color{
+    color: white;
+    font-weight: bold;
+}
+
 .btnsubmit{
-    padding: 10px;
-    
+margin-left:0px;
+    margin-top: 10px;
+    width: 200px;
+    font-weight: bold;
+
+}
+.inputset{
+    width: 350px;
+    padding: 6px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(242, 245, 248);
+    box-shadow: 1px 1px 2px 1px gray;
+}
+.text{
+    font-size: 15px;
+    text-align: center;
+    margin-top: 10px;
+    color: white;
+  
+}
+.page{
+
+}
+.link-login{
+    text-decoration: none !important;
+    color: white;
+    margin-left: 10px;
 }
