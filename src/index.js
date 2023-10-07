@@ -7,7 +7,7 @@ import Home from './views/Home/Home'
 import DashBoard from './views/DashBoard/DashBoard'
 import Ipd from './views/Ipd/Ipd'
 import Department from './views/Department/Department';
-
+import Contact from './views/Contact/Contact'
 import Registration from './views/Registration/Registration'
 import { createBrowserRouter,RouterProvider} from 'react-router-dom';
 import OpdPatients from './views/Opd/Opd';
@@ -52,7 +52,8 @@ const router =createBrowserRouter([
    {
     path:"/contact",
     element:<Contact/>
-
+   },
+ {
     path:"/login",
     element:<LoginPage/>
 

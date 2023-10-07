@@ -13,19 +13,21 @@ function LoginPage() {
     const local = JSON.parse(localStorage.getItem("user"))
 
     if (local.email === Email && local.password === Password) {
-      alert('Login successfully');
+      showToast(" login successfull.",'success', 3000);
 
     } else {
-      setPassword('Invalid email password');
+      showToast("Password do not Match.",'alert', 3000);
     }
 
   }
 
 
   return (
-    <div className="login-container ">
+    <div className="main-login-container d-flex ">
+      <div className="side-container-login"></div>
+      <div className="login-container">
       <form>
-        <label className="name">Email:</label>
+        <label className="name">User Name:</label>
         <input type='email' className="input-box"
           placeholder="enter email"
           onChange={(e) => {
@@ -45,6 +47,7 @@ function LoginPage() {
 
 
       </form>
+      </div>
     </div>
   )
 }
