@@ -1,62 +1,86 @@
 import React from 'react';
+
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
-import Home from './views/Home/Home'
-import DashBoard from './views/DashBoard/DashBoard'
-import Ipd from './views/Ipd/Ipd'
+import Home from './views/Home/Home';
+import DashBoard from './views/DashBoard/DashBoard';
+import Ipd from './views/Ipd/Ipd';
 import Department from './views/Department/Department';
-import Contact from './views/Contact/Contact'
-import Registration from './views/Registration/Registration'
-import { createBrowserRouter,RouterProvider} from 'react-router-dom';
 import OpdPatients from './views/Opd/Opd';
+import Registration from './views/Registration/Registration'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import DoctorModule from './views/DoctorModule/DoctorModule'
 import SignUp from './views/SignUp/SignUp';
 import LoginPage from './views/LoginPage/LoginPage';
+import PatientDetail from './views/PatientDetail/PatientDetail';
+import Contact  from './views/Contact/Contact';
+import Appoinment from './views/Appoinment/Appoinment';
 
 
-const router =createBrowserRouter([
+const router = createBrowserRouter([
     {
-        path:"/",
-        element:<Home/>
+        path: "/",
+        element: <Home />
     },
+    // {
+    //     path: "/about",
+    //     element: <About />
+    // },
     {
-        path: "/dashBoard",
-        element:<DashBoard/>
-    },
-    {
-        path: "/Ipd",
-        element:<Ipd/>
-    },
-    {
-        path:"/deparment",
-        element:<Department/>
-    },
-     {
-        path:"/opd",
-        element:<OpdPatients/>
+        path: "/contact",
+        element: <Contact />
     },
     {
-        path:"/reg",
-        element:<Registration />
+        path: "/login",
+        element: <LoginPage />
     },
-   {
-    path:"/dr",
-    element:<DoctorModule/>
-   },
-   {
-    path:"/signup",
-    element:<SignUp/>
-   },
-   {
-    path:"/contact",
-    element:<Contact/>
+    {
+        path: "/dashboard",
+        element: <DashBoard />
     },
-{
-    path:"/login",
-    element:<LoginPage/>
-   }
+    {
+        path: "/deparment",
+        element: <Department />
+    },
+    {
+        path: "/doctormodule",
+        element: <DoctorModule />
+    },
+    {
+        path: "/appoinment",
+        element: <Appoinment />
+    },
+    {
+        path: "/registartion",
+        element: <Registration />
+    },
+    {
+        path: "/ipd",
+        element: <Ipd />
+    },
+    {
+        path: "/opd",
+        element: <OpdPatients />
+    },
+    {
+        path: "/patientdetail",
+        element: <PatientDetail />
+    },
+    {
+        path: "/signup",
+        element: <SignUp />
+    // }, 
+    // {
+    //     path: "/service",
+    //     element: <Service />
+    // {
+    //     path: "/faq",
+    //     element: <Faq />
+    // },
+    }
+   
 
 ])
 

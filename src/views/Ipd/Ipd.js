@@ -20,17 +20,22 @@ function Ipd() {
   const [room, setRoom] = useState('');
   const [bedNo, setBedNo] = useState('');
   const [isEdit, setIsEdit] = useState('');
+  const [filteredPatient,setFilteredPatients]=useState([]);
 
   useEffect(() => {
-    const filteredPatients = ipdpatientlist.filter((patient) => {
+    const filtered = patients.filter((patient) => {
       const name = patient.patientName.toLowerCase();
-      const mobile = patient.id.toString();
+      const id = patient.id.toString();
       const query = searchTerm.toLowerCase();
-      return name.includes(query) || mobile.includes(query);
+      return name.includes(query) || id.includes(query);
     });
-
-    setPatients(filteredPatients);
-  }, [searchTerm]);
+  
+    if (searchTerm === '') {
+      setFilteredPatients(patients); 
+    } else {
+      setFilteredPatients(filtered);
+    }
+  }, [searchTerm, patients]);
 
   useEffect(() => {
     const list = JSON.parse(localStorage.getItem('ipdlistpatient'));
@@ -169,7 +174,7 @@ function Ipd() {
               <IpdHeader />
             </div>
             <div>
-              {patients.map((patient, index) => {
+              {filteredPatient.map((patient, index) => {
                 const { id, patientName, room, bedNo } = patient;
 
                 return <IpdPatientListCard

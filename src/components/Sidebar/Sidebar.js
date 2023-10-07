@@ -1,23 +1,22 @@
 import React from "react";
 import "./Sidebar.css"
 import { useEffect,useState } from "react";
+import { Link } from "react-router-dom";
+import dash from './dashboard.png';
+import dept from './department.png';
+import doctor from './doctor.png';
+import app from './appointment.png';
+import reg from './registration.png';
+import ipd from './ipd.png';
+import opd from './opd.png';
+import details from './details.png';
+import service from './service.png'
+
 export default function Dashboard(){
     const [issetmenu,setIssetmenu]=useState(true)
     const [classname,setClassname]=useState("sidebar-open")
    
-    // function addmenuclass(){
-    //     setClassname('')
-    //     setIssetmenu(false)
-        
-    // }
-
-    // function removemenuclas(){
-    //     setClassname("sidebar-open")
-    //     setIssetmenu(true)
-
-    // }
-    // issetmenu?addmenuclass:removemenuclas
-    // {`sidebar ${classname}`}
+   
     let isSidebarOpen = true;
     function toggleMenu(){
         isSidebarOpen=!isSidebarOpen;
@@ -34,21 +33,20 @@ export default function Dashboard(){
  <div className="logo"><span className="nametext1">HospitalAdminPro</span>
  </div>
         <div className="sidebar-navlinks">
-            <ul>
-                <li> <i class="bi bi-person-circle"></i> Dashboard </li>
-                <li> <i class="bi bi-person-circle"></i> Department Module </li>
-                <li> <i class="bi bi-person-circle"></i> Doctor Module </li>
-                <li>  <i class="bi bi-person-circle"></i> Appoinment </li>
-                <li> <i class="bi bi-clipboard2-check"></i> Registration </li>
-                <li> <i class="bi bi-clipboard2-check"></i> IPD Patients </li>
-                <li> <i class="bi bi-clipboard2-check"></i> OPD Painents </li>
-                <li> <i class="bi bi-clipboard2-check"></i> Prescription</li>
-                <li> <i class="bi bi-clipboard2-check"></i> Services</li>
+            <ul className="list">
+               <Link to="/dashBoard" className="text"><li><img src={dash} className="icon"  alt=""/> Dashboard </li></Link>
+               <Link to="/deparment" className="text"><li><img src={dept} className="icon"  alt="" />Department Module </li></Link>
+               <Link to="/doctormodule" className="text"><li><img src={doctor} />Doctor Module </li></Link>
+               <Link to="/appoinment" className="text"><li><img src={app} className="icon"  alt=""/>Appoinment </li></Link>
+               <Link to="/registartion" className="text"><li><img src={reg} className="icon"  alt="" />Registration </li></Link>
+               <Link to="/ipd" className="text"><li><img src={ipd} className="icon"  alt="" />IPD Patients </li></Link>
+               <Link to="/opd" className="text"><li><img src={opd} className="icon"  alt=""/>OPD Painents </li></Link>
+               <Link to="/patientdetail" className="text"><li><img src={details} className="icon"  alt=""/>Patient Details</li></Link>
+               <Link to="/service" className="text"><li><img src={service} className="icon"  alt=""/>Services</li></Link>
 
             </ul>
 
         </div>
-      
         </div>
       
        
