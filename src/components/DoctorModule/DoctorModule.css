@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0px;
+}
+
+.dctor-conatiner{
+    width: 100%;
+}
+.doctor-main-con{
+    background-color: aliceblue;
+}
+.conatiner-bodypart{
+    background-color: aliceblue;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+}
+.box{
+    height: 350px;
+    width: 600px;
+    background-color: #c6c6fd;
+    border-radius: 15px;
+    border: none;
+    padding: 10px;
+    margin: auto auto;
+    margin: 20px;
+    box-shadow: 1px 1px 2px 1px;
+
+}
+.text2{
+    font-size: 25px;
+    color: blue;
+   
+}
+.text{
+    font-size: 25px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.imgdoc{
+    height: 230px;
+   position: relative;
+   left: 360px;
+   bottom:270px;
+   border-radius: 5px;
+
+}
