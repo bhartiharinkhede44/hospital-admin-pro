@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import RegPatient from "../../components/RegPatient/RegPatient";
-import Button from "./../../components/Button/Button";
 import Dashboard from "../../components/Sidebar/Sidebar";
 import Header from "../../components/Header/Header";
 import add from "./../Ipd/add.png";
@@ -16,52 +15,38 @@ function Registration() {
       city: "Rahuri",
       date: "2015-1-dec",
     },
-    {
-      patientname: "Sakshi Mane",
-      gender: "Female",
-      age: 20,
-      bloodgroup: "b+",
-      contactnumber: "123",
-      city: "Rahuri",
-      date: "2015-1-dec",
-    },
-    {
-      patientname: "Sakshi Mane",
-      gender: "Female",
-      age: 20,
-      bloodgroup: "b+",
-      contactnumber: "123",
-      city: "Rahuri",
-      date: "2015-1-dec",
-    },
-    {
-      patientname: "Sakshi Mane",
-      gender: "Female",
-      age: 20,
-      bloodgroup: "b+",
-      contactnumber: "123",
-      city: "Rahuri",
-      date: "2015-1-dec",
-    },
-    {
-      patientname: "Sakshi Mane",
-      gender: "Female",
-      age: 20,
-      bloodgroup: "b+",
-      contactnumber: "123",
-      city: "Rahuri",
-      date: "2015-1-dec",
-    },
-    {
-      patientname: "Sakshi Mane",
-      gender: "Female",
-      age: 20,
-      bloodgroup: "b+",
-      contactnumber: "123",
-      city: "Rahuri",
-      date: "2015-1-dec",
-    },
   ]);
+  const [patientname, setPatientName] = useState("");
+  const [gender, setGneder] = useState("");
+  const [age, setAge] = useState("");
+  const [bloodgroup, setBloodGroup] = useState("");
+  const [contactnumber, setContactNumber] = useState("");
+  const [city, setCity] = useState("");
+  const [date, setDate] = useState("");
+
+  // add addPatientToList
+  const addPatientToList = () => {
+    const randomId = Math.floor(Math.random() * 1000);
+
+    const obj = {
+      id: randomId,
+      patientname: patientname,
+      gender: gender,
+      age: age,
+      bloodgroup: bloodgroup,
+      contactnumber: contactnumber,
+      date: date,
+    };
+    console.log(obj);
+    setRegisterPatient([...registerPatient, obj]);
+    setPatientName("");
+    setGneder("");
+    setBloodGroup("");
+    setAge("");
+    setContactNumber("");
+    setDate("");
+  };
+
   return (
     <>
       <div className="d-flex ">
@@ -84,9 +69,13 @@ function Registration() {
                   <div className="col-md-4">
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       id="inputtext2"
                       placeholder="PATIENT FULL NAME"
+                      value={patientname}
+                      onChange={(e) => {
+                        setPatientName(e.target.value);
+                      }}
                     />
                   </div>
                   <div className="col-md-4">
@@ -94,17 +83,25 @@ function Registration() {
                       <div className="col-md-6">
                         <input
                           type="text"
-                          class="form-control"
+                          className="form-control"
                           id="inputtext2"
                           placeholder="Gender"
+                          value={gender}
+                          onChange={(e) => {
+                            setGneder(e.target.value);
+                          }}
                         />
                       </div>
                       <div className="col-md-6">
                         <input
                           type="number"
-                          class="form-control"
+                          className="form-control"
                           id="inputtext2"
                           placeholder="Age"
+                          value={age}
+                          onChange={(e) => {
+                            setAge(e.target.value);
+                          }}
                         />
                       </div>
                     </div>
@@ -114,17 +111,25 @@ function Registration() {
                       <div className="col-md-6">
                         <input
                           type="text"
-                          class="form-control"
+                          className="form-control"
                           id="inputtext2"
                           placeholder="Blood Group"
+                          value={bloodgroup}
+                          onChange={(e) => {
+                            setBloodGroup(e.target.value);
+                          }}
                         />
                       </div>
                       <div className="col-md-6">
                         <input
                           type="text"
-                          class="form-control"
+                          className="form-control"
                           id="inputtext2"
                           placeholder="City"
+                          value={city}
+                          onChange={(e) => {
+                            setCity(e.target.value);
+                          }}
                         />
                       </div>
                     </div>
@@ -134,24 +139,37 @@ function Registration() {
                   <div className="col-md-4">
                     <input
                       type="number"
-                      class="form-control"
+                      className="form-control"
                       id="inputtext2"
                       placeholder="Contact Number"
+                      value={contactnumber}
+                      onChange={(e) => {
+                        setContactNumber(e.target.value);
+                      }}
                     />
                   </div>
                   <div className="col-md-4">
                     <input
                       type="date"
-                      class="form-control"
+                      className="form-control"
                       id="inputtext2"
                       placeholder=""
+                      value={date}
+                      onChange={(e) => {
+                        setDate(e.target.value);
+                        console.log(e.target.value);
+                      }}
                     />
                   </div>
                   <div className="col-md-4">
-                    <Button
+                    <button
+                      type="button"
                       btnName={"Add Patient"}
-                      CustomBtn={"btn btn-primary px-5 mt-1"}
-                    />
+                      className="btn-primary px-5 fw-bold mt-0"
+                      onClick={addPatientToList}
+                    >
+                      Add Patient
+                    </button>
                   </div>
                 </div>
               </div>
