@@ -4,6 +4,7 @@ import Dashboard from "../../components/Sidebar/Sidebar";
 import Header from "../../components/Header/Header";
 import add from "./../Ipd/add.png";
 import "./Registration.css";
+import showToast from "crunchy-toast"
 
 function Registration() {
   const [registerPatient, setRegisterPatient] = useState([
@@ -45,8 +46,37 @@ function Registration() {
 
   // add addPatientToList
   const addPatientToList = () => {
+    if (!patientname) {
+      showToast("patient name is Required.", "alert", 3000);
+      return;
+    }
+    if (!gender) {
+      showToast("gender is Required.", "alert", 3000);
+      return;
+    }
+    if (!age) {
+      showToast("age  is Required.", "alert", 3000);
+      return;
+    }
+    if (!bloodgroup) {
+      showToast("blood group is Required.", "alert", 3000);
+      return;
+    }
+    if (!contactnumber) {
+      showToast("contact number is Required.", "alert", 3000);
+      return;
+    }
+   
+    if (!date) {
+      showToast("date is Required.", "alert", 3000);
+      return;
+    }
+    if (!city) {
+      showToast("city is Required.", "alert", 3000);
+      return;
+    }
     const randomId = Math.floor(Math.random() * 1000);
-
+    
     const obj = {
       id: randomId,
       patientname: patientname,
