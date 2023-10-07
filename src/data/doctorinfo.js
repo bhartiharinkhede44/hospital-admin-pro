@@ -2,25 +2,25 @@ export const  Doctorinfo= [
 
         {
            "id" : 1,
-           "name" : " Mohammad juned",
+           "name" : " Karan Sharma",
            "speciality" : " Neuroloist",
            "degree" : " MBBS.MD.Neurosergen",
-           "age": 27,
+           "age": 35,
           "image": "https://specialisthospital.in/wp-content/uploads/2022/01/Dr_basanth_general_medicine-1.jpg"
           
         },
         {
             "id" : 2,
-            "name" : " Saurabh Jaykar",
+            "name" : " Saurabh Mishara",
             "speciality" : " Cardiologist",
             "degree" : " MBBS.MD.Cardiologist",
-            "age": 29,
+            "age": 38,
             "image":"https://specialisthospital.in/wp-content/uploads/2021/03/Dr-Bhargav-Intensivist.jpg"
            
          },
          {
             "id" : 4,
-            "name" : " Bandini Kohare",
+            "name" : " Lalita Verma",
             "speciality" : "Surgen ",
             "degree" : " MBBS.MD.Ms",
             "age": 30,
@@ -67,7 +67,7 @@ export const  Doctorinfo= [
             "name" : " Sonali singh",
             "speciality" : " Gynecologist",
             "degree" : " MBBS.MD. Gynecologist",
-            "age": 27,
+            "age": 39,
             "image": "https://specialisthospital.in/wp-content/uploads/2020/09/37-Dr-Jaya-sharma-Dermatology-.png"
             
          },
