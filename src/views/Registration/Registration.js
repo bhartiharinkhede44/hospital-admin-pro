@@ -270,23 +270,25 @@ function Registration() {
             <div className="container mt-5">
               <h1>PATIENT LIST</h1>
 
-              {registerPatient.map((patient, index) => (
-                <div key={index}>
-                  <RegPatient
-                    patientname={patient.patientname}
-                    gender={patient.gender}
-                    age={patient.age}
-                    bloodgroup={patient.bloodgroup}
-                    contactnumber={patient.contactnumber}
-                    date={patient.date}
-                    city={patient.city}
-                    key={index}
-                    removePatientList={() => removePatientList(patient.id)}
-                    obj={registerPatient}
-                    setTaskEditable={() => setTaskEditable(patient.id)}
-                  />
-                </div>
-              ))}
+              <div className="patient-container">
+                {registerPatient.map((patient, index) => (
+                  <div key={index}>
+                    <RegPatient
+                      patientname={patient.patientname}
+                      gender={patient.gender}
+                      age={patient.age}
+                      bloodgroup={patient.bloodgroup}
+                      contactnumber={patient.contactnumber}
+                      date={patient.date}
+                      city={patient.city}
+                      key={index}
+                      removePatientList={() => removePatientList(patient.id)}
+                      obj={registerPatient}
+                      setTaskEditable={() => setTaskEditable(patient.id)}
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
