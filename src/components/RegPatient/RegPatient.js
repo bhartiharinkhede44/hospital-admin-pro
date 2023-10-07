@@ -2,6 +2,7 @@ import React from "react";
 import "./RegPatient.css";
 
 function RegPatient({
+  id,
   patientname,
   gender,
   age,
@@ -9,12 +10,14 @@ function RegPatient({
   contactnumber,
   city,
   date,
+  removePatientList,
+  obj,
 }) {
   return (
     <>
       <div className=" d-flex justify-content-center ">
         <div className="card m-2" style={{ width: "50rem" }}>
-          <div className="card-body">
+          <div className="card-body  rg-patient-card">
             <div className="row">
               <div className="col-md-4">
                 <h6>Name : {patientname}</h6>
@@ -38,6 +41,15 @@ function RegPatient({
               </div>
               <div className="col-md-3">
                 <h6>{contactnumber}</h6>
+              </div>
+              <div className="col-md-2">
+                <span className="delet-icon"
+                  onClick={() => {
+                    removePatientList(obj);
+                  }}
+                >
+                  🗑️
+                </span>
               </div>
             </div>
           </div>

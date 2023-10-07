@@ -47,6 +47,21 @@ function Registration() {
     setDate("");
   };
 
+  // Delete Task Button
+  const removePatientList = (id) => {
+    let index;
+    registerPatient.forEach((task, i) => {
+      if (task.id === id) {
+        index = i;
+      }
+    });
+
+    const tempArray = registerPatient;
+    tempArray.splice(index, 1);
+
+    setRegisterPatient([...tempArray]);
+  };
+
   return (
     <>
       <div className="d-flex ">
@@ -178,7 +193,7 @@ function Registration() {
             <div className="container mt-5">
               <h1>REGISTRATION PATIENT</h1>
 
-              {registerPatient.map((patient, i) => {
+              {registerPatient.map((patient, index) => {
                 const {
                   patientname,
                   gender,
@@ -191,7 +206,6 @@ function Registration() {
                 return (
                   <div>
                     <RegPatient
-                      key={i}
                       patientname={patientname}
                       gender={gender}
                       age={age}
@@ -199,6 +213,9 @@ function Registration() {
                       contactnumber={contactnumber}
                       city={city}
                       date={date}
+                      key={index}
+                      removePatientList={removePatientList}
+                      obj={registerPatient}
                     />
                   </div>
                 );
