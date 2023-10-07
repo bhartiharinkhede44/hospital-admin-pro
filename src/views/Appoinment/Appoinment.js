@@ -147,7 +147,7 @@ function Appoinment() {
             </div>
             <div>
               {patients.map((patient, index) => {
-                const { id, patientName, city, time, department, contactNo } = patient;
+                const { id, patientName, city, time, department, contactNo ,am} = patient;
 
                 return <AppoinmentPatientcard
                   key={index}
@@ -158,6 +158,7 @@ function Appoinment() {
                   contactNo={contactNo}
                   time={time}
                   department={department}
+                  
                   removePatientFromList={removePatientFromList}
                   index={index}
                 />
@@ -213,9 +214,13 @@ function Appoinment() {
                       onChange={(e) => {
                         setTime(e.target.value)
                       }}
-                    
+                   
                       className="task-input"
                     />
+                    <select className="task-input">
+                      <option>PM</option>
+                      <option>AM</option>
+                    </select>
                     <input
                       type="text"
                       value={department}
