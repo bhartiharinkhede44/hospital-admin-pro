@@ -5,13 +5,13 @@ import showToast from 'crunchy-toast';
 
 function LoginPage() {
   const [Email, setEmail] = useState('');
-  const [Password, setPassword] = useState('')
+  const [Password, setPassword] = useState('');
 
 
   function handleLogin() {
 
     const local = JSON.parse(localStorage.getItem("user"))
-
+    
     if (local.email === Email && local.password === Password) {
       showToast(" login successfull.",'success', 3000);
 
@@ -24,26 +24,27 @@ function LoginPage() {
 
   return (
     <div className="main-login-container d-flex ">
-      <div className="side-container-login"></div>
+     
       <div className="login-container">
       <form>
-        <label className="name">User Name:</label>
+        <label className="name">User Name:</label><br />
         <input type='email' className="input-box"
-          placeholder="enter email"
+          placeholder="enter email" required
           onChange={(e) => {
             setEmail(e.target.value);
 
 
           }} /><br /><br />
-        <label className="name">Password:</label>
+        <label className="name">Password:</label><br />
         <input type='password' className="input-box"
-          placeholder="enter password"
+          placeholder="enter password"required
           onChange={(e) => {
             setPassword(e.target.value);
 
 
           }} /><br /><br />
-        <button onClick={handleLogin}>Login</button>
+           <input type="checkbox" className="checkbox" required/>Remember Me <br/>
+        <button onClick={handleLogin} className="loginbttn">Login</button>
 
 
       </form>

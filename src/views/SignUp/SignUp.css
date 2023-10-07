@@ -8,12 +8,12 @@
 .signup-container{
    
    width: 400px;
-margin-left: 100px;
+   margin-left: 100px;
    border:none;
-   padding: 40px;
+   padding: 20px;
    display: block;
- 
-   margin-top: 80px;
+  
+   margin-top: 40px;
    border-radius: 20px;
   
 }
@@ -27,7 +27,7 @@ margin-left:0px;
     margin-top: 10px;
     width: 200px;
     font-weight: bold;
-
+    
 }
 .inputset{
     width: 350px;
@@ -41,6 +41,7 @@ margin-left:0px;
     font-size: 15px;
     text-align: center;
     margin-top: 10px;
+    margin-left:0px;
     color: white;
   
 }
@@ -50,5 +51,4 @@ margin-left:0px;
 .link-login{
     text-decoration: none !important;
     color: white;
-    margin-left: 10px;
 }
