@@ -140,41 +140,12 @@ function Appoinment() {
               /></p>
             </div>
           </div>
-
-          <div className='container-patient div-patient-list'>
-            <div>
-              <AppoinmentHeader />
-            </div>
-            <div>
-              {patients.map((patient, index) => {
-                const { id, patientName, city, time, department, contactNo ,am} = patient;
-
-                return <AppoinmentPatientcard
-                  key={index}
-                  id={id}
-                  patientName={patientName}
-                  city={city}
-
-                  contactNo={contactNo}
-                  time={time}
-                  department={department}
-                  
-                  removePatientFromList={removePatientFromList}
-                  index={index}
-                />
-              })}
-            </div>
-            {
-              patients.length === 0 ? <span className='pa-center'>Patient is not found!</span> : null
-            }
-          </div>
-          <hr />
           <div>
-            <h1 className='add-btn'><img src={add} />ADD PATIENT</h1>
+            
             <div>
               <div>
 
-                <div className="add-patient-to-list-container">
+                <div className="add-patient-to-list-container mb-5">
                   <form>
 
                     <input
@@ -241,6 +212,35 @@ function Appoinment() {
               </div>
             </div>
           </div>
+          <div className='container-patient div-patient-list'>
+            <div>
+              <AppoinmentHeader />
+            </div>
+            <div>
+              {patients.map((patient, index) => {
+                const { id, patientName, city, time, department, contactNo ,am} = patient;
+
+                return <AppoinmentPatientcard
+                  key={index}
+                  id={id}
+                  patientName={patientName}
+                  city={city}
+
+                  contactNo={contactNo}
+                  time={time}
+                  department={department}
+                  
+                  removePatientFromList={removePatientFromList}
+                  index={index}
+                />
+              })}
+            </div>
+            {
+              patients.length === 0 ? <span className='pa-center'>Patient is not found!</span> : null
+            }
+          </div>
+          <hr />
+          
         </div>
       </div>
     </>

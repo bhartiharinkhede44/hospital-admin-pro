@@ -12,6 +12,15 @@ export default function PatientDetail(){
             </div>
             <div>
                 <Header />
+                <div className='top-header-on-dashboard'>
+                        <div className='d-flex'>
+                            <div>
+                                <h3 className='title'>Patient Details</h3>
+                            
+                            </div>
+                        </div>
+
+                    </div>
                 <SearchId />
             </div>
         </div>

@@ -1,0 +1,33 @@
+.service-card-container{
+    height: auto;
+    width: 420px;
+    position: relative;
+   box-shadow: 1px 1px 3px 1px gray;
+   padding: 10px 10px;
+   background-color: #c6c6fd;
+margin-top: 50px;
+
+}
+
+.service-card-img{
+    height: 280px;
+    width: 400px;
+}
+.service-card-value{
+    color: red;
+}
+.service-card-email{
+    color: green;
+}
+.service-card-title{
+    font-weight: bold;
+    color: black;
+    margin-top: 10px;
+}
+.contact-btn{
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+}
