@@ -31,7 +31,8 @@ export default function Dashboard(){
        <div className="wrap"> 
        <div className= " sidebar sidebar-open" id="menu">
 
- <div className="logo"><span className="nametext1">HospitalAdminPro</span></div>
+ <div className="logo"><span className="nametext1">HospitalAdminPro</span>
+ </div>
         <div className="sidebar-navlinks">
             <ul>
                 <li> <i class="bi bi-person-circle"></i> Dashboard </li>
