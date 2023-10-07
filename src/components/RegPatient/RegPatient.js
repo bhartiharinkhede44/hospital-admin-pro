@@ -11,7 +11,7 @@ function RegPatient({
   city,
   date,
   removePatientList,
-  setTaskEditable
+  setTaskEditable,
 }) {
   return (
     <>
@@ -20,7 +20,9 @@ function RegPatient({
           <div className="card-body  rg-patient-card">
             <div className="row">
               <div className="col-md-4">
-                <h6>Name : {patientname}</h6>
+                <h6>
+                  <i class="fa-solid fa-user"></i> {patientname}
+                </h6>
               </div>
               <div className="col-md-3">
                 <h6>Gender: {gender}</h6>
@@ -29,34 +31,45 @@ function RegPatient({
                 <h6>Age : {age}</h6>
               </div>
               <div className="col-md-2">
-                <h6>{bloodgroup}</h6>
+                <h6>
+                  <i class="fa-solid fa-droplet"></i> {bloodgroup}
+                </h6>
               </div>
             </div>
             <div className="row mt-3">
               <div className="col-md-4">
-                <h6>city: {city}</h6>
+                <h6>
+                  <i class="fa-solid fa-city"></i> {city}
+                </h6>
               </div>
               <div className="col-md-3">
-                <h6>{date}</h6>
+                <h6>
+                  <i class="fa-solid fa-calendar-days"></i> {"   "}
+                  {date}
+                </h6>
               </div>
               <div className="col-md-3">
-                <h6>{contactnumber}</h6>
+                <h6>
+                  {" "}
+                  <i class="fa-solid fa-phone"></i> {contactnumber}
+                </h6>
               </div>
               <div className="col-md-2">
-                <span className="delet-icon"
+                <span
+                  className="delet-icon"
                   onClick={() => {
                     removePatientList(id);
                   }}
                 >
-                  🗑️
+                  <i class="fa-solid fa-trash"></i>
                 </span>
                 <span
                   className="update-icon cusror-pointer"
                   onClick={() => {
-                  setTaskEditable(id);
+                    setTaskEditable(id);
                   }}
                 >
-                  🖊️
+                  <i class="fa-solid fa-pen-to-square"></i>
                 </span>
               </div>
             </div>

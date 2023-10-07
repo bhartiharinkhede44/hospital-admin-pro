@@ -218,7 +218,7 @@ function Registration() {
                     </div>
                   </div>
                 </div>
-                <div className="row mt-3">
+                <div className="row mt-4">
                   <div className="col-md-4">
                     <input
                       type="number"
