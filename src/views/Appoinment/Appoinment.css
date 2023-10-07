@@ -16,7 +16,9 @@
     
 
 }
-
+.maincontainer{
+    background-color:#f1f5f9;
+}
 .heading {
     color: #3333ff;
 }

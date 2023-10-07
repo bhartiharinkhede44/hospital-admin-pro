@@ -16,16 +16,15 @@ function Navbar() {
     <div className="collapse navbar-collapse" id="navbarText">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0 " >
         <li className="nav-item ">
-          <a className="nav-link active text-light" aria-current="page" href="#">Home</a>
+          <Link to ="/" className="nav-link active text-light fs-4 ms-5" aria-current="page" href="#">Home</Link>
         </li>
+       
         <li className="nav-item">
-          <a className="nav-link text-light" href="#">About</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link text-light" href="#">Contact</a>
+          <Link to="/contact" className="nav-link text-light fs-4 ms-5" href="#">Contact</Link>
         </li>
       </ul>
-      <p className="loginbtn">login</p>
+      <Link to="/signup"><p className="loginbtn fs-4">Sign Up</p></Link>
+      <Link to="/login"><p className="loginbtn fs-4">login</p></Link> 
     </div>
   </div>
 </nav>

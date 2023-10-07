@@ -10,7 +10,9 @@ import reg from './registration.png';
 import ipd from './ipd.png';
 import opd from './opd.png';
 import details from './details.png';
-import service from './service.png'
+import service from './service.png';
+import logo from './logo1.jpg';
+import logobg from "./logo1-removebg-preview.png"
 
 export default function Dashboard(){
     const [issetmenu,setIssetmenu]=useState(true)
@@ -30,7 +32,9 @@ export default function Dashboard(){
        <div className="wrap"> 
        <div className= " sidebar sidebar-open" id="menu">
 
- <div className="logo"><span className="nametext1">HospitalAdminPro</span>
+ <div className="logo">
+<img src={logobg} className="logo-img"/>
+    <span className="nametext1">HospitalAdminPro</span>
  </div>
         <div className="sidebar-navlinks">
             <ul className="list">

@@ -123,7 +123,7 @@ function Appoinment() {
 
   return (
     <>
-      <div className='d-flex'>
+      <div className='d-flex maincontainer'>
         <div><Sidebar /></div>
         <div className='ipd-list-div'>
           <Header />

@@ -162,7 +162,7 @@ function Registration() {
 
   return (
     <>
-      <div className="d-flex ">
+      <div className="d-flex maincontainer">
         <div>
           <Dashboard />
         </div>

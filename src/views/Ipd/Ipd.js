@@ -151,7 +151,7 @@ function Ipd() {
 
   return (
     <>
-      <div className='d-flex'>
+      <div className='d-flex maincontainer'>
         <div><Sidebar /></div>
         <div className='ipd-list-div'>
           <Header />
@@ -196,7 +196,7 @@ function Ipd() {
           </div>
           <hr />
           <div>
-            <h1 className='add-btn'><img src={add} />{isEdit ? `UPDATE ${id}` : 'ADD PATIENT'}</h1>
+            <h1 className='add-btn'><img src={add} />{isEdit ? `Update ${id}` : 'Add Patient'}</h1>
             <div>
               <div>
             

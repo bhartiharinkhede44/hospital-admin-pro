@@ -15,9 +15,9 @@ top: 0;
 }
 .sidebar{
     height: 100vh;
-    width: 260px;
-  
-    background-color: rgb(9, 90, 252);
+    width: 265px;
+  background-color: #7c7cb4;
+   
 }
 .sidebar-close{
   width: 70px;
@@ -52,31 +52,45 @@ top: 0;
 .nametext1{
     font-size: 30px;
     font-weight: bold;   
-    color: #3333ff;
+    color: #3cd5ff;
 }
 .sidebar-navlinks ul{
     color: white;
     font-size: 20px;
 }
 .sidebar-navlinks ul li{
-   margin-top: 25px;
+   margin-top: 15px;
+   padding: 3px;
    list-style: none;
    text-align: start;
    font-size: 20px;
+   color: white;
 } 
+.sidebar-navlinks ul li:hover{
+    background-color: rgb(106, 106, 159);
+    color: white;
+}
 .logo{
-    height: 100px;
+    height: 150px;
     display: block;
     padding-top: 25px;
-    background-color: #c6c6fd;
+   background-color: re;
 }
 .text{
     text-decoration: none;
-    color: white;
+    color: blue
 }
 .list{
     font-size: 20px;
 }
 .icon{
     height: 30px;
+}
+.logo-img{
+    height: 80px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    border-radius: 50px;
 }

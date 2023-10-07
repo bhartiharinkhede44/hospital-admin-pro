@@ -6,7 +6,7 @@ import './PatientDetail.css';
 export default function PatientDetail(){
     return(
         <>
-        <div className='d-flex'>
+        <div className='d-flex maincontainer'>
             <div>
                 <Dashboard />
             </div>

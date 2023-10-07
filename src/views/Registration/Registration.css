@@ -23,3 +23,6 @@ input {
 .patient-container::-webkit-scrollbar{
   width: 5px;
 }
+.maincontainer{
+  background-color:#f1f5f9;
+}

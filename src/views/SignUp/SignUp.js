@@ -16,7 +16,7 @@ function SignUp() {
   function handleSubmit() {
 
     if (!fullname || !email || !password || !hospitalName || !currentPassword) {
-      showToast(`please fill all the field !`, `warning`, 3000);
+   
     };
 
 
@@ -78,7 +78,7 @@ function SignUp() {
               setCurrentPassword(e.target.value)
             }} /><br /><br />
 
-          <button onClick={handleSubmit} className='btnsubmit'>SUBMIT</button>
+          <Link to="/dashboard"><button onClick={handleSubmit} className='btnsubmit'>SUBMIT</button></Link>
           <p className='text'>Already a member ? <Link to="/login" className='link-login'>Log In</Link></p>
         </form>
       </div>

@@ -129,7 +129,7 @@ function OpdPatients() {
 
   return (
     <>
-      <div className='d-flex'>
+      <div className='d-flex contain'>
         <div><Sidebar /></div>
         <div className='ipd-list-div'>
           <Header />

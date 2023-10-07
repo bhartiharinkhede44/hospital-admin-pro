@@ -5,7 +5,7 @@ import Navbar from '../../components/Navbar/Navbar';
 function HomeFaq() {
     return (
         <>
-            <div>
+            <div className='maincontainer'>
                 <Navbar />
                 <div className='div-card-faq'>
                     <h2 className='question'>1. What is Hospital Management Software?</h2>
