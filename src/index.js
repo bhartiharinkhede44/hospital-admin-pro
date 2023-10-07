@@ -13,6 +13,7 @@ import { createBrowserRouter,RouterProvider} from 'react-router-dom';
 import OpdPatients from './views/Opd/Opd';
 import DoctorModule from './views/DoctorModule/DoctorModule'
 import SignUp from './views/SignUp/SignUp';
+import LoginPage from './views/LoginPage/LoginPage';
 
 const router =createBrowserRouter([
     {
@@ -40,13 +41,18 @@ const router =createBrowserRouter([
         element:<Registration />
     },
    {
-    path:"/doctormodule",
+    path:"/dr",
     element:<DoctorModule/>
    },
    {
     path:"/signup",
     element:<SignUp/>
+   },
+   {
+    path:"/login",
+    element:<LoginPage/>
    }
+
 
 ])
 
