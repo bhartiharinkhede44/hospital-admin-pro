@@ -17,9 +17,9 @@
 
 }
 .box-doct{
-    height: 310px;
-    width: 600px;
-    background-color: #c6c6fd;
+    height: 270px;
+    width: 440px;
+    background-color: #d7d7ec;
     border-radius: 15px;
     border: none;
     padding: 10px;
@@ -30,18 +30,18 @@
 
 }
 .text2{
-    font-size: 25px;
+    font-size: 15px;
     color: aliceblue;
 }
 .text{
-    font-size: 24px;
+    font-size: 20px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .imgdoc{
-    height: 200px;
+    height: 150px;
    position: relative;
-   left: 380px;
-   bottom:280px;
+   left: 270px;
+   bottom:220px;
    border-radius: 10px;
 
 }
