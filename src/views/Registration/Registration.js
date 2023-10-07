@@ -39,6 +39,7 @@ function Registration() {
     };
     console.log(obj);
     setRegisterPatient([...registerPatient, obj]);
+    setCity("");
     setPatientName("");
     setGneder("");
     setBloodGroup("");
@@ -73,7 +74,7 @@ function Registration() {
 
           <div className="ipd-top-header d-flex">
             <img src={add} />
-            <h1 className="heading">PATIENT REGISTRATION</h1>
+            <h1 className="heading">PATIENT REGISTRATION {city}</h1>
           </div>
 
           <div className="container p-5 mt- shadow border-black  add-patient-list ">
@@ -144,6 +145,7 @@ function Registration() {
                           value={city}
                           onChange={(e) => {
                             setCity(e.target.value);
+                            console.log(e.target.value);
                           }}
                         />
                       </div>
@@ -168,7 +170,7 @@ function Registration() {
                       type="date"
                       className="form-control"
                       id="inputtext2"
-                      placeholder=""
+                   
                       value={date}
                       onChange={(e) => {
                         setDate(e.target.value);
@@ -211,11 +213,11 @@ function Registration() {
                       age={age}
                       bloodgroup={bloodgroup}
                       contactnumber={contactnumber}
-                      city={city}
                       date={date}
                       key={index}
                       removePatientList={removePatientList}
                       obj={registerPatient}
+                      city={city}
                     />
                   </div>
                 );

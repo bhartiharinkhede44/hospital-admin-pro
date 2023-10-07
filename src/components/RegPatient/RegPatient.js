@@ -33,7 +33,7 @@ function RegPatient({
             </div>
             <div className="row mt-3">
               <div className="col-md-4">
-                <h6>{city}</h6>
+                <h6>city: {city}</h6>
               </div>
               <div className="col-md-3">
                 <h6>{date}</h6>
@@ -42,13 +42,13 @@ function RegPatient({
                 <h6>{contactnumber}</h6>
               </div>
               <div className="col-md-2">
-                <span className="delet-icon"
+                {/* <span className="delet-icon"
                   onClick={() => {
                     removePatientList(id);
                   }}
                 >
                   🗑️
-                </span>
+                </span> */}
               </div>
             </div>
           </div>
