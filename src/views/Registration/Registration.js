@@ -4,9 +4,12 @@ import Dashboard from "../../components/Sidebar/Sidebar";
 import Header from "../../components/Header/Header";
 import add from "./../Ipd/add.png";
 import "./Registration.css";
+import showToast from "crunchy-toast"
+
 function Registration() {
   const [registerPatient, setRegisterPatient] = useState([
     {
+      id: 1, // Include an initial id
       patientname: "Sakshi Mane",
       gender: "Female",
       age: 20,
@@ -16,19 +19,22 @@ function Registration() {
       date: "2015-1-dec",
     },
   ]);
+
+  const [id, setId] = useState(0);
   const [patientname, setPatientName] = useState("");
-  const [gender, setGneder] = useState("");
+  const [gender, setGender] = useState(""); // Correct the variable name
   const [age, setAge] = useState("");
   const [bloodgroup, setBloodGroup] = useState("");
   const [contactnumber, setContactNumber] = useState("");
   const [city, setCity] = useState("");
   const [date, setDate] = useState("");
+  const [isEdit, setIsEdit] = useState(false);
 
   // loadPatientfromLocalStorage
   useEffect(() => {
     const patient = JSON.parse(localStorage.getItem("patientlist"));
 
-    if (patient && patient.lenght > 0) {
+    if (patient && patient.length > 0) {
       setRegisterPatient(patient);
     }
   }, []);
@@ -40,8 +46,37 @@ function Registration() {
 
   // add addPatientToList
   const addPatientToList = () => {
+    if (!patientname) {
+      showToast("patient name is Required.", "alert", 3000);
+      return;
+    }
+    if (!gender) {
+      showToast("gender is Required.", "alert", 3000);
+      return;
+    }
+    if (!age) {
+      showToast("age  is Required.", "alert", 3000);
+      return;
+    }
+    if (!bloodgroup) {
+      showToast("blood group is Required.", "alert", 3000);
+      return;
+    }
+    if (!contactnumber) {
+      showToast("contact number is Required.", "alert", 3000);
+      return;
+    }
+   
+    if (!date) {
+      showToast("date is Required.", "alert", 3000);
+      return;
+    }
+    if (!city) {
+      showToast("city is Required.", "alert", 3000);
+      return;
+    }
     const randomId = Math.floor(Math.random() * 1000);
-
+    
     const obj = {
       id: randomId,
       patientname: patientname,
@@ -50,13 +85,14 @@ function Registration() {
       bloodgroup: bloodgroup,
       contactnumber: contactnumber,
       date: date,
+      city: city,
     };
 
     const newRegPatientList = [...registerPatient, obj];
     setRegisterPatient(newRegPatientList);
     setCity("");
     setPatientName("");
-    setGneder("");
+    setGender(""); // Correct the variable name
     setBloodGroup("");
     setAge("");
     setContactNumber("");
@@ -67,18 +103,61 @@ function Registration() {
 
   // Delete Task Button
   const removePatientList = (id) => {
-    let index;
-    registerPatient.forEach((task, i) => {
-      if (task.id === id) {
-        index = i;
-      }
-    });
+    const updatedPatientList = registerPatient.filter(
+      (patient) => patient.id !== id
+    );
 
-    const tempArray = registerPatient;
-    tempArray.splice(index, 1);
+    setRegisterPatient(updatedPatientList);
+    savePatientToLocalStorage(updatedPatientList);
+  };
 
-    setRegisterPatient([...tempArray]);
-    savePatientToLocalStorage(tempArray);
+  // Edit Task Button
+  const setTaskEditable = (id) => {
+    const patientToEdit = registerPatient.find((patient) => patient.id === id);
+
+    if (patientToEdit) {
+      setId(patientToEdit.id);
+      setPatientName(patientToEdit.patientname);
+      setGender(patientToEdit.gender); // Correct the variable name
+      setAge(patientToEdit.age);
+      setBloodGroup(patientToEdit.bloodgroup);
+      setContactNumber(patientToEdit.contactnumber);
+      setDate(patientToEdit.date);
+      setCity(patientToEdit.city);
+      setIsEdit(true);
+    }
+  };
+
+  // Update Task Button
+  const updateTask = () => {
+    const updatedPatient = {
+      id: id,
+      patientname: patientname,
+      gender: gender,
+      age: age,
+      bloodgroup: bloodgroup,
+      contactnumber: contactnumber,
+      date: date,
+      city: city,
+    };
+
+    const updatedPatientList = registerPatient.map((patient) =>
+      patient.id === id ? updatedPatient : patient
+    );
+
+    setRegisterPatient(updatedPatientList);
+
+    setId(0);
+    setCity("");
+    setPatientName("");
+    setGender(""); // Correct the variable name
+    setBloodGroup("");
+    setAge("");
+    setContactNumber("");
+    setDate("");
+
+    setIsEdit(false);
+    savePatientToLocalStorage(updatedPatientList);
   };
 
   return (
@@ -91,7 +170,7 @@ function Registration() {
           <Header />
 
           <div className="ipd-top-header d-flex">
-            <img src={add} />
+            <img src={add} alt="Add" />
             <h1 className="heading">PATIENT REGISTRATION {city}</h1>
           </div>
 
@@ -122,7 +201,7 @@ function Registration() {
                           placeholder="Gender"
                           value={gender}
                           onChange={(e) => {
-                            setGneder(e.target.value);
+                            setGender(e.target.value); // Correct the variable name
                           }}
                         />
                       </div>
@@ -163,14 +242,13 @@ function Registration() {
                           value={city}
                           onChange={(e) => {
                             setCity(e.target.value);
-                            console.log(e.target.value);
                           }}
                         />
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="row mt-3">
+                <div className="row mt-4">
                   <div className="col-md-4">
                     <input
                       type="number"
@@ -191,54 +269,56 @@ function Registration() {
                       value={date}
                       onChange={(e) => {
                         setDate(e.target.value);
-                        console.log(e.target.value);
                       }}
                     />
                   </div>
                   <div className="col-md-4">
-                    <button
-                      type="button"
-                      btnName={"Add Patient"}
-                      className="btn-primary px-5 fw-bold mt-0"
-                      onClick={addPatientToList}
-                    >
-                      Add Patient
-                    </button>
+                    <div className="">
+                      {isEdit ? (
+                        <button
+                          type="button"
+                          className="btn-primary px-5 fw-bold mt-0"
+                          onClick={updateTask}
+                        >
+                          Update
+                        </button>
+                      ) : (
+                        <button
+                          type="button"
+                          className="btn-primary px-5 fs-6 fw-bold mt-0"
+                          onClick={addPatientToList}
+                        >
+                          Add
+                        </button>
+                      )}
+                    </div>
                   </div>
                 </div>
               </div>
             </form>
             <hr className="hr mt-4" />
             <div className="container mt-5">
-              <h1>REGISTRATION PATIENT</h1>
+              <h1>PATIENT LIST</h1>
 
-              {registerPatient.map((patient, index) => {
-                const {
-                  patientname,
-                  gender,
-                  age,
-                  bloodgroup,
-                  contactnumber,
-                  city,
-                  date,
-                } = patient;
-                return (
-                  <div>
+              <div className="patient-container">
+                {registerPatient.map((patient, index) => (
+                  <div key={index}>
                     <RegPatient
-                      patientname={patientname}
-                      gender={gender}
-                      age={age}
-                      bloodgroup={bloodgroup}
-                      contactnumber={contactnumber}
-                      date={date}
+                      patientname={patient.patientname}
+                      gender={patient.gender}
+                      age={patient.age}
+                      bloodgroup={patient.bloodgroup}
+                      contactnumber={patient.contactnumber}
+                      date={patient.date}
+                      city={patient.city}
                       key={index}
-                      removePatientList={removePatientList}
+                      removePatientList={() => removePatientList(patient.id)}
                       obj={registerPatient}
-                      city={city}
+                      setTaskEditable={() => setTaskEditable(patient.id)}
                     />
                   </div>
-                );
-              })}
+                ))}
+              </div>
             </div>
           </div>
         </div>

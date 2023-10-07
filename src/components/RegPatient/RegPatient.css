@@ -1,5 +1,16 @@
-.rg-patient-card{
-    position: relative;
-
+.rg-patient-card {
+  position: relative;
+  cursor: pointer;
 }
-
+.update-icon {
+ background-color :#ddddff;
+ padding : 7px !important;
+ border-radius : 50%;
+ margin : 0 18px;
+}
+.delete-icon {
+  margin-right : 5px !important;
+  background-color :#ddddff;
+  padding : 7px !important;
+  border-radius : 50%;
+}
