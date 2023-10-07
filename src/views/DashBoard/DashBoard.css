@@ -29,10 +29,10 @@
 }
 
 .card-container{
-    height: 150px;
+    height: 150px !important;
     background-color: #c6c6fd;
-    width: 290px;
-    margin-top: 30px;
+    width: 290px !important;
+    margin: 30px;
     padding: 20px;
     border: none;
     border-radius: 20px;
