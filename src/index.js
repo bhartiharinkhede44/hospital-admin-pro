@@ -18,6 +18,7 @@ import PatientDetail from './views/PatientDetail/PatientDetail';
 import Contact  from './views/Contact/Contact';
 import Appoinment from './views/Appoinment/Appoinment';
 import Faq from './views/HomeFaq/HomeFaq'
+import Service from './views/Services/Services';
 
 
 const router = createBrowserRouter([
@@ -76,6 +77,10 @@ const router = createBrowserRouter([
     {
         path: "/faq",
         element: <Faq />
+    },
+    {
+        path: "/service",
+        element: <Service />
     }
    
 

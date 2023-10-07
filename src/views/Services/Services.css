@@ -1,0 +1,17 @@
+.main1{
+    flex-wrap: wrap;
+}
+.img1{
+    width: 80px;
+    height: 70px;
+}
+.title{
+    color: blue;
+    font-weight: bold;
+}
+.service-text{
+    margin-top: -5px;
+}
+.linkto{
+    text-decoration: none;
+}
