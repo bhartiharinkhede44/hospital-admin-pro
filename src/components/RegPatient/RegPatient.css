@@ -1,5 +1,9 @@
-.rg-patient-card{
-    position: relative;
-
+.rg-patient-card {
+  position: relative;
+  cursor: pointer;
 }
-
+.update-icon {
+ background-color :#ddddff;
+ padding : 8px !important;
+ border-radius : 50%;
+}
