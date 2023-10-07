@@ -35,20 +35,19 @@ export default function Dashboard(){
  </div>
         <div className="sidebar-navlinks">
             <ul>
-                <li> <i class="bi bi-person-circle"></i> Dashboard </li>
-                <li> <i class="bi bi-person-circle"></i> Department Module </li>
-                <li> <i class="bi bi-person-circle"></i> Doctor Module </li>
-                <li>  <i class="bi bi-person-circle"></i> Appoinment </li>
-                <li> <i class="bi bi-clipboard2-check"></i> Registration </li>
-                <li> <i class="bi bi-clipboard2-check"></i> IPD Patients </li>
-                <li> <i class="bi bi-clipboard2-check"></i> OPD Painents </li>
-                <li> <i class="bi bi-clipboard2-check"></i> Prescription</li>
-                <li> <i class="bi bi-clipboard2-check"></i> Services</li>
+                <li> <i cllassName="bi bi-person-circle"></i> Dashboard </li>
+                <li> <i cllassName="bi bi-person-circle"></i> Department Module </li>
+                <li> <i cllassName="bi bi-person-circle"></i> Doctor Module </li>
+                <li>  <i cllassName="bi bi-person-circle"></i> Appoinment </li>
+                <li> <i cllassName="bi bi-clipboard2-check"></i> Registration </li>
+                <li> <i cllassName="bi bi-clipboard2-check"></i> IPD Patients </li>
+                <li> <i cllassName="bi bi-clipboard2-check"></i> OPD Painents </li>
+                <li> <i cllassName="bi bi-clipboard2-check"></i> Prescription</li>
+                <li> <i cllassName="bi bi-clipboard2-check"></i> Services</li>
 
             </ul>
 
         </div>
-      
         </div>
       
        
