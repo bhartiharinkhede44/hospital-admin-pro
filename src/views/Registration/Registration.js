@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import RegPatient from "../../components/RegPatient/RegPatient";
 import Dashboard from "../../components/Sidebar/Sidebar";
 import Header from "../../components/Header/Header";
@@ -24,6 +24,17 @@ function Registration() {
   const [city, setCity] = useState("");
   const [date, setDate] = useState("");
 
+  // loadPatientfromLocalStorage
+  useEffect(() => {
+    const patient = JSON.parse(localStorage.getItem("patientlist"));
+    setRegisterPatient(patient);
+  }, []);
+
+  // savePatientToLocalStorage
+  const savePatientToLocalStorage = (patients) => {
+    localStorage.setItem("patientlist", JSON.stringify(patients));
+  };
+
   // add addPatientToList
   const addPatientToList = () => {
     const randomId = Math.floor(Math.random() * 1000);
@@ -37,8 +48,9 @@ function Registration() {
       contactnumber: contactnumber,
       date: date,
     };
-    console.log(obj);
-    setRegisterPatient([...registerPatient, obj]);
+
+    const newRegPatientList = [...registerPatient, obj];
+    setRegisterPatient(newRegPatientList);
     setCity("");
     setPatientName("");
     setGneder("");
@@ -46,6 +58,8 @@ function Registration() {
     setAge("");
     setContactNumber("");
     setDate("");
+
+    savePatientToLocalStorage(newRegPatientList);
   };
 
   // Delete Task Button
@@ -61,6 +75,8 @@ function Registration() {
     tempArray.splice(index, 1);
 
     setRegisterPatient([...tempArray]);
+    savePatientToLocalStorage(tempArray)
+
   };
 
   return (
@@ -170,7 +186,6 @@ function Registration() {
                       type="date"
                       className="form-control"
                       id="inputtext2"
-                   
                       value={date}
                       onChange={(e) => {
                         setDate(e.target.value);
