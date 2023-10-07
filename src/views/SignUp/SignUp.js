@@ -2,11 +2,14 @@ import React from 'react'
 import "./SignUp.css"
 import { useState } from "react";
 import showToast from 'crunchy-toast';
+import { Link } from "react-router-dom";
+
 
 function SignUp() {
   const [fullname, setFullName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [hospitalName,setHospitalName]=useState('');
   const [currentPassword, setCurrentPassword] = useState('');
 
   
@@ -20,6 +23,7 @@ function SignUp() {
     const data = {
       fullname,
       email,
+      hospitalName,
       password
 
     }
@@ -28,39 +32,55 @@ function SignUp() {
     
   }
   return (
-    <div className='signup-container'>
+    <div className='main d-flex'>
+      <div className='signup-container'>
       <form>
-        <label className="name">Name:</label>
+        <h1 className='hea-color'>Sign up</h1>
+        <label className="name">Name:</label><br/>
 
-        <input type='text'
+        <input type='text'className='inputset'
           onChange={(e) => {
             setFullName(e.target.value)
           }}
           placeholder='full name' /><br /> <br />
 
 
-        <label className="name">Email:</label>
+        <label className="name">Email:</label><br/>
 
-        <input type='text'
+        <input type='text'className='inputset'
 
           onChange={(e) => {
             setEmail(e.target.value)
           }} placeholder='Enter email'
         /><br /><br />
-        <label className='password'>Password:</label>
-        <input type='password'
+        <label className="name">Hospital Name:</label><br/>
+
+<input type='text'className='inputset'
+
+  onChange={(e) => {
+    setHospitalName(e.target.value)
+  }} placeholder='Enter hospital name'
+/><br /><br />
+        <label className='password'>Password:</label><br/>
+        <input type='password'className='inputset'
           onChange={(e) => {
             setPassword(e.target.value)
           }}
         /><br /><br />
-        <label>Confirm Password:</label>
-        <input type='password'
+        <label>Confirm Password:</label><br/>
+        <input type='password'className='inputset'
           onChange={(e) => {
             setCurrentPassword(e.target.value)
           }} /><br /><br />
 
+<button onClick={handleSubmit} className='btnsubmit'>SUBMIT</button>
+      <p className='text'>Already a member ? <Link to="/login" className='link-login'>Log In</Link></p>  
       </form>
-      <button onClick={handleSubmit} className='btnsubmit'>submit</button>
+      </div>
+      
+      <div className='page'>
+        
+      </div>
 
    
     </div >

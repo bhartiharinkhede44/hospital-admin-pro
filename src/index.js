@@ -13,7 +13,9 @@ import { createBrowserRouter,RouterProvider} from 'react-router-dom';
 import OpdPatients from './views/Opd/Opd';
 import DoctorModule from './views/DoctorModule/DoctorModule'
 import SignUp from './views/SignUp/SignUp';
-import Contact from "./views/Contact/Contact"
+import LoginPage from './views/LoginPage/LoginPage';
+
+
 const router =createBrowserRouter([
     {
         path:"/",
@@ -40,7 +42,7 @@ const router =createBrowserRouter([
         element:<Registration />
     },
    {
-    path:"/doctormodule",
+    path:"/dr",
     element:<DoctorModule/>
    },
    {
@@ -50,7 +52,12 @@ const router =createBrowserRouter([
    {
     path:"/contact",
     element:<Contact/>
+
+    path:"/login",
+    element:<LoginPage/>
+
    }
+
 
 ])
 
