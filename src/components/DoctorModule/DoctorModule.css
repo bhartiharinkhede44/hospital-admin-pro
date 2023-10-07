@@ -19,27 +19,29 @@
 .box{
     height: 350px;
     width: 600px;
-    background-color: #689A99;
+    background-color: #c6c6fd;
     border-radius: 15px;
-    border: 2px solid #5dd7d5;
+    border: none;
     padding: 10px;
-    color:aliceblue;
     margin: auto auto;
     margin: 20px;
+    box-shadow: 1px 1px 2px 1px;
 
 }
 .text2{
     font-size: 25px;
-    color: aliceblue;
+    color: blue;
+   
 }
 .text{
-    font-size: 28px;
+    font-size: 25px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .imgdoc{
-    height: 130px;
+    height: 230px;
    position: relative;
-   left: 270px;
-   bottom:140px;
+   left: 360px;
+   bottom:270px;
+   border-radius: 5px;
 
 }
