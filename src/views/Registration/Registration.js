@@ -27,7 +27,10 @@ function Registration() {
   // loadPatientfromLocalStorage
   useEffect(() => {
     const patient = JSON.parse(localStorage.getItem("patientlist"));
-    setRegisterPatient(patient);
+
+    if (patient && patient.lenght > 0) {
+      setRegisterPatient(patient);
+    }
   }, []);
 
   // savePatientToLocalStorage
@@ -75,8 +78,7 @@ function Registration() {
     tempArray.splice(index, 1);
 
     setRegisterPatient([...tempArray]);
-    savePatientToLocalStorage(tempArray)
-
+    savePatientToLocalStorage(tempArray);
   };
 
   return (
