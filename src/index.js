@@ -15,6 +15,7 @@ import DoctorModule from './views/DoctorModule/DoctorModule'
 import SignUp from './views/SignUp/SignUp';
 import LoginPage from './views/LoginPage/LoginPage';
 
+
 const router =createBrowserRouter([
     {
         path:"/",
@@ -49,8 +50,12 @@ const router =createBrowserRouter([
     element:<SignUp/>
    },
    {
+    path:"/contact",
+    element:<Contact/>
+
     path:"/login",
     element:<LoginPage/>
+
    }
 
 
