@@ -5,6 +5,7 @@ import Header from "../../components/Header/Header";
 import add from "./../Ipd/add.png";
 import "./Registration.css";
 import showToast from "crunchy-toast";
+import { getValue } from "@testing-library/user-event/dist/utils";
 
 function Registration() {
   const [registerPatient, setRegisterPatient] = useState([
@@ -174,7 +175,7 @@ function Registration() {
             <h1 className="heading">PATIENT REGISTRATION {city}</h1>
           </div>
 
-          <div className="container p-5 mt- shadow border-black  add-patient-list ">
+          <div className="container p-5 mt-3 shadow border-black  add-patient-list ">
             <form>
               <div className="full-name-container container">
                 <div className="rg-header-container"></div>
@@ -194,8 +195,9 @@ function Registration() {
                   <div className="col-md-4">
                     <div className="row">
                       <div className="col-md-6">
-                        <select
-                          className="form-control"
+                      <select
+                          className="form-control regi-select"
+                          value={gender}
                           onChange={(e) => {
                             setGender(e.target.value);
                           }}
@@ -207,6 +209,15 @@ function Registration() {
                             Prefer to Not Say
                           </option>
                         </select>
+                        <input 
+                          type="text"
+                          className="form-control custom-d"
+                          id="inputtext2"
+                          placeholder="Gender"
+                          value={gender}
+                         
+                        />
+                      
                       </div>
                       <div className="col-md-6">
                         <input
@@ -226,7 +237,7 @@ function Registration() {
                     <div className="row">
                       <div className="col-md-6">
                         <select
-                          className="form-control"
+                          className="form-control regi-select"
                           value={bloodgroup}
                           onChange={(e) => {
                             setBloodGroup(e.target.value);
@@ -241,6 +252,14 @@ function Registration() {
                           <option value="O+">O+</option>
                           <option value="O-">O-</option>
                         </select>
+                        <input  
+                          type="text" 
+                          className="form-control custom-d"
+                          id="inputtext2"
+                          placeholder="Blood Group"
+                          value={bloodgroup}
+                        
+                        />
                       </div>
                       <div className="col-md-6">
                         <input
