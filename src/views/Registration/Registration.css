@@ -11,6 +11,14 @@ input {
   border-radius: 0px !important;
   margin: 30xp !important;
 }
+select{
+  border: 1px solid #727687 !important;
+  background-color: #fff !important;
+  font-size: 15px !important;
+  border-radius: 0px !important;
+  margin: 30xp !important;
+}
+
 
 ::placeholder {
   color: grey !important;

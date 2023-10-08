@@ -4,12 +4,12 @@ import Dashboard from "../../components/Sidebar/Sidebar";
 import Header from "../../components/Header/Header";
 import add from "./../Ipd/add.png";
 import "./Registration.css";
-import showToast from "crunchy-toast"
+import showToast from "crunchy-toast";
 
 function Registration() {
   const [registerPatient, setRegisterPatient] = useState([
     {
-      id: 1, // Include an initial id
+      id: 1,
       patientname: "Sakshi Mane",
       gender: "Female",
       age: 20,
@@ -66,7 +66,7 @@ function Registration() {
       showToast("contact number is Required.", "alert", 3000);
       return;
     }
-   
+
     if (!date) {
       showToast("date is Required.", "alert", 3000);
       return;
@@ -76,7 +76,7 @@ function Registration() {
       return;
     }
     const randomId = Math.floor(Math.random() * 1000);
-    
+
     const obj = {
       id: randomId,
       patientname: patientname,
@@ -194,16 +194,19 @@ function Registration() {
                   <div className="col-md-4">
                     <div className="row">
                       <div className="col-md-6">
-                        <input
-                          type="text"
+                        <select
                           className="form-control"
-                          id="inputtext2"
-                          placeholder="Gender"
-                          value={gender}
                           onChange={(e) => {
-                            setGender(e.target.value); // Correct the variable name
+                            setGender(e.target.value);
                           }}
-                        />
+                        >
+                          <option value="Male">Male</option>
+                          <option value="Female">Female</option>
+                          <option value="Other">Other</option>
+                          <option value="Prefer Not to Say">
+                            Prefer to Not Say
+                          </option>
+                        </select>
                       </div>
                       <div className="col-md-6">
                         <input
@@ -222,16 +225,22 @@ function Registration() {
                   <div className="col-md-4">
                     <div className="row">
                       <div className="col-md-6">
-                        <input
-                          type="text"
+                        <select
                           className="form-control"
-                          id="inputtext2"
-                          placeholder="Blood Group"
                           value={bloodgroup}
                           onChange={(e) => {
                             setBloodGroup(e.target.value);
                           }}
-                        />
+                        >
+                          <option value="A+">A+</option>
+                          <option value="A-">A-</option>
+                          <option value="B+">B+</option>
+                          <option value="B-">B-</option>
+                          <option value="AB+">AB+</option>
+                          <option value="AB-">AB-</option>
+                          <option value="O+">O+</option>
+                          <option value="O-">O-</option>
+                        </select>
                       </div>
                       <div className="col-md-6">
                         <input
