@@ -48,15 +48,21 @@ top: 0;
     color: white;
     height: 130px;
     padding: 20px;
+    
 }
 .nametext1{
-    font-size: 30px;
+    font-size: 23px;
     font-weight: bold;   
     color: #3cd5ff;
+
+ margin-left: 20px;
+
+  
 }
 .sidebar-navlinks ul{
     color: white;
     font-size: 20px;
+    margin-top: 30px;
 }
 .sidebar-navlinks ul li{
    margin-top: 15px;

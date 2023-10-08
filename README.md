@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+﻿# Hospital Admin Pro🏥
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 🏥Hospital Admin Pro
+**Homepage**
+<img src="./src/components/output-img/homesite.png" /><br />
+**Features**
+<img src="./src/components/output-img/homesite-features.png" />
+**Dashboard**
+<img src="./src/components/output-img/dashboard.png">
+**Department Module**
+<img src="./src/components/output-img/department.png">
+**Doctor Module**
+<img src="./src/components/output-img/doctor-module.png">
 
-## Available Scripts
+**Registration**
+<img src="./src/components/output-img/registration.png">
 
-In the project directory, you can run:
+**Appoinment**
+<img src="./src/components/output-img/appoinment.png">
 
-### `npm start`
+**IPD**
+<img src="./src/components/output-img/ipd.png">
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**Service Module**
+<img src="./src/components/output-img/service.png">
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Use Of Project
 
-### `npm test`
+**Hospital admin Pro**is a system enabling hospitals to manage information and data related to all aspects of healthcare – processes, providers, patients, and more, which in turn ensures that processes are completed swiftly and effectively. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Description 📝
+We have created this project using `HTML` ,`CSS`, `json` , `javacript`, `Node.JS`, `React`
 
-### `npm run build`
+ Making it user-friendly and accessible to Hospital administration, An Innovative Healthcare IT Solution, Featuring a Web-Based Hospital Management System, Designed to Streamline Operations, Enhance Patient Care, and Improve Overall Efficiency.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Real Life Use🎊
+Our platform is designed to assist  to the hospitals translates to being able to track patient history, provide better care, keep track of appointments, save patient insurance and payment data, enable doctors and clinicians to check patient history, maintain patient care continuity, and save time and effort on unnecessary tedious manual tasks.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Future Scope🔮✨
+The future of hospitalAdmin pro software in India is promising and full of possibilities. With the Internet of Things, hospitals will manage their patients more conveniently and effectively, with increased safety and better customer service.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Contributors 👏
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<a href="https://github.com/bhartiharinkhede44/hospital-admin-pro">
+  <img src="https://contrib.rocks/image?repo=bhartiharinkhede44/hospital-admin-pro" />
+</a>

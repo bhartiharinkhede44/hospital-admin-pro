@@ -34,7 +34,8 @@ export default function Dashboard(){
 
  <div className="logo">
 <img src={logobg} className="logo-img"/>
-    <span className="nametext1">HospitalAdminPro</span>
+    <span className="nametext1">Patil Multispeciality &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Hospital</span>
+    
  </div>
         <div className="sidebar-navlinks">
             <ul className="list">

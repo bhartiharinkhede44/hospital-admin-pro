@@ -8,7 +8,7 @@ export default function Header() {
         <>
         <div className="header">
             <h4 className="btn-log-out fs-5">FAQ</h4>
-        <Link to="/"> <h4 className="btn-log-out fs-5">Logout<img src={Logout} className="png-log-out"/></h4></Link>
+        <Link to="/" className="log"> <h4 className="btn-log-out fs-5">Logout<img src={Logout} className="png-log-out"/></h4></Link>
         <Link to="/dashBoard"><img src={Profile} /></Link>
         </div>
         </>
