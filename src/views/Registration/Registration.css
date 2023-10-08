@@ -9,8 +9,14 @@ input {
   background-color: #fff !important;
   font-size: 15px !important;
   border-radius: 0px !important;
-  margin: 30xp !important;
 }
+.regi-select{
+  border: 1px solid #727687 !important;
+  background-color: #fff !important;
+  font-size: 15px !important;
+  border-radius: 0px !important;
+}
+
 
 ::placeholder {
   color: grey !important;
@@ -25,4 +31,7 @@ input {
 }
 .maincontainer{
   background-color:#f1f5f9;
+}
+.custom-d{
+  visibility:hidden;
 }
