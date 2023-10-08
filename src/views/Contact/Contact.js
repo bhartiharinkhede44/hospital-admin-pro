@@ -77,7 +77,7 @@ export default function Contact() {
                             <textarea className="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                         </div>
                         <br/>
-                        <button className=" btn btn-primary"> SEND</button>
+                        <button className=" btn btn-primary">SEND</button>
 
                     </div>
                     <div className="form2">

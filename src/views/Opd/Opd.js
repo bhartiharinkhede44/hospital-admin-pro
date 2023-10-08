@@ -170,7 +170,7 @@ function OpdPatients() {
           </div>
           <hr />
           <div>
-            <h1 className='add-btn'><img src={add} />{isEdit ? `UPDATE ${id}` : 'ADD PATIENT'}</h1>
+            <h1 className='add-btn'><img src={add} />{isEdit ? `Update ${id}` : 'Add Patient'}</h1>
             <div>
               <div>
                 <div className="add-patient-to-list-container">

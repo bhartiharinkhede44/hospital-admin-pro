@@ -29,8 +29,9 @@ function LoginPage() {
      
       <div className="login-container">
       <form>
+        <h1 className="login">Login</h1>
         <label className="name">User Name:</label><br />
-        <input type='email' className="input-box"
+        <input type='email' className="inputbox-login"
           placeholder="enter email" required
           onChange={(e) => {
             setEmail(e.target.value);
@@ -38,7 +39,7 @@ function LoginPage() {
 
           }} /><br /><br />
         <label className="name">Password:</label><br />
-        <input type='password' className="input-box"
+        <input type='password' className="inputbox-login"
           placeholder="enter password"required
           onChange={(e) => {
             setPassword(e.target.value);

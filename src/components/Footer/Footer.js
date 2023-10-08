@@ -20,8 +20,9 @@ function Footer() {
     </div>
     <div class="col">
       <h4>Contact</h4>
-      <img src={gmailcontact} className="gmailcontact-img"></img><br/>
-      <p>📞:+ 7821892252</p>
+      <h5> ✉️ hospitaladminpro.org</h5>
+      
+      <p>📞:+ 91-66449907</p>
 
       
     </div>

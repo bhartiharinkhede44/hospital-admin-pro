@@ -1,5 +1,5 @@
 .header{
-    background-color: rgb(9, 90, 252);
+    background-color: #7c7cb4;
     height: 70px;
     position: sticky;
     top: 0;
@@ -10,6 +10,7 @@
     justify-content: end;
     padding-bottom: 10px;
     text-align: center;
+    margin-left: 2px;
 }
 .btn-log-out{
     color: #fff;
@@ -24,4 +25,7 @@ padding-top: 17px;
 }
 img{
     margin-right: 20px;
+}
+.log{
+    text-decoration: none;
 }
